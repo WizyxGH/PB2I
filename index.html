@@ -16,9 +16,9 @@
   <main id="main-content" class="page-offset">
 
     <!-- ─── Section 1: Hero ─────────────────────────────────── -->
-    <section id="hero" class="bg-hero-gradient flex flex-col lg:flex-row gap-12 lg:gap-16 px-4 lg:px-36 py-12 lg:py-16 items-center">
+    <section id="hero" class="bg-hero-gradient flex flex-col lg:flex-row gap-8 lg:gap-16 px-4 lg:px-36 py-10 lg:py-16 items-center overflow-hidden">
       <!-- Left column: Headings & CTAs -->
-      <div class="flex-1 min-w-0">
+      <div class="flex-1 min-w-0 w-full">
         <h1 class="font-heading font-extrabold text-3xl lg:text-4xl text-gray-900 leading-tight mb-6" data-i18n="hero.title">
           Patrimoine Belfortain de l'Industrie Informatique
         </h1>
@@ -32,17 +32,17 @@
       </div>
       
       <!-- Right column: Overlapping Polaroid Cards -->
-      <div class="flex-1 flex justify-center items-center relative h-64 lg:h-[280px] w-full max-w-[450px]">
+      <div class="flex-1 flex justify-center items-center relative w-full max-w-xs lg:max-w-md mx-auto hero-polaroid-wrap">
         <!-- Polaroid Card 1 (Rotated) -->
-        <div class="absolute z-10 transform rotate-2 translate-x-4 lg:translate-x-8 -translate-y-2 card-polaroid w-[260px] lg:w-[290px]">
-          <div class="card-polaroid-img-wrap h-[120px] lg:h-[140px]">
+        <div class="absolute z-10 transform rotate-2 hero-polaroid-card">
+          <div class="card-polaroid-img-wrap hero-polaroid-img">
             <img src="/assets/figma/hero-1.png" alt="Mécanographie Bull" class="card-polaroid-img">
           </div>
           <p class="card-polaroid-caption" data-i18n="hero.photo_caption_1">Atelier mécanographique à cartes perforées</p>
         </div>
         <!-- Polaroid Card 2 (Straight) -->
-        <div class="absolute z-20 -translate-x-8 lg:-translate-x-12 translate-y-4 card-polaroid w-[260px] lg:w-[290px]">
-          <div class="card-polaroid-img-wrap h-[120px] lg:h-[140px]">
+        <div class="absolute z-20 hero-polaroid-card-2">
+          <div class="card-polaroid-img-wrap hero-polaroid-img">
             <img src="/assets/figma/hero-2.png" alt="Exposition permanente" class="card-polaroid-img">
           </div>
           <p class="card-polaroid-caption" data-i18n="hero.photo_caption_2">Exposition permanente dans nos locaux</p>

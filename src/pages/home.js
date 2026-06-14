@@ -15,27 +15,46 @@ const track  = document.getElementById('carousel-track')
 const items  = track?.querySelectorAll('.card-image-wrap')
 const prev   = document.getElementById('carousel-prev')
 const next   = document.getElementById('carousel-next')
-const dots   = document.querySelectorAll('.carousel-dot')
+
 
 if (track && items?.length) {
   let current = 0
   const total   = items.length
-  const visible = () => window.innerWidth <= 768 ? 1 : 3
+  const visible = () => window.innerWidth >= 1024 ? 3 : window.innerWidth >= 640 ? 2 : 1
   const maxIdx  = () => Math.max(0, total - visible())
+  const dotsContainer = document.getElementById('carousel-dots')
 
-  function goTo(idx) {
-    current = Math.max(0, Math.min(idx, maxIdx()))
-    const itemW = items[0].offsetWidth + 16
-    track.style.transform = `translateX(-${current * itemW}px)`
-    dots.forEach((d, i) => {
+  function buildDots() {
+    if (!dotsContainer) return
+    const count = maxIdx() + 1
+    dotsContainer.innerHTML = Array.from({ length: count }, (_, i) =>
+      `<button class="carousel-dot w-2 h-2 rounded-full transition-all duration-200"
+        style="background:${i === current ? 'var(--color-primary)' : 'rgba(112,36,36,0.25)'};transform:${i === current ? 'scale(1.3)' : 'scale(1)'}"
+        aria-label="Slide ${i + 1}"></button>`
+    ).join('')
+    dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) =>
+      d.addEventListener('click', () => goTo(i))
+    )
+  }
+
+  function updateDots() {
+    const allDots = dotsContainer?.querySelectorAll('.carousel-dot')
+    allDots?.forEach((d, i) => {
       d.style.background = i === current ? 'var(--color-primary)' : 'rgba(112,36,36,0.25)'
       d.style.transform  = i === current ? 'scale(1.3)' : 'scale(1)'
     })
   }
 
+  function goTo(idx) {
+    current = Math.max(0, Math.min(idx, maxIdx()))
+    const gap = parseInt(getComputedStyle(track).gap) || 24
+    const itemW = items[0].offsetWidth + gap
+    track.style.transform = `translateX(-${current * itemW}px)`
+    updateDots()
+  }
+
   prev?.addEventListener('click', () => goTo(current - 1))
   next?.addEventListener('click', () => goTo(current + 1))
-  dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)))
 
   // Auto-play
   let timer = setInterval(() => goTo(current + 1 > maxIdx() ? 0 : current + 1), 4500)
@@ -53,9 +72,17 @@ if (track && items?.length) {
     if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1)
   })
 
-  window.addEventListener('resize', () => goTo(current))
+  window.addEventListener('resize', () => {
+    // Clamp current to new maxIdx after resize
+    current = Math.min(current, maxIdx())
+    buildDots()
+    goTo(current)
+  })
+
+  buildDots()
   goTo(0)
 }
+
 
 // ── Load latest articles ─────────────────────────────────────
 async function loadNews() {
@@ -71,12 +98,12 @@ async function loadNews() {
 
     newsList.innerHTML = articles.map(a => `
       <a href="${baseUrl}article.html?id=${a.id}"
-        class="bg-white border-2 border-[#252525] flex gap-4 items-start overflow-hidden relative w-full lg:w-[350px] h-[100px] shrink-0 no-underline hover:scale-[1.01] transition-transform duration-150">
+        class="bg-white border-2 border-[#252525] flex gap-4 items-start overflow-hidden relative w-full min-h-[80px] shrink-0 no-underline hover:scale-[1.01] transition-transform duration-150">
         <img src="${a.thumbnail}" alt="${a.title}"
-          class="w-[100px] h-[100px] object-cover shrink-0"
+          class="w-20 sm:w-24 self-stretch object-cover shrink-0"
           onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?w=200&q=60'">
-        <div class="flex-1 min-w-0 pr-4 py-3 flex flex-col justify-between h-full">
-          <p class="font-heading font-semibold text-sm text-[#252525] truncate" style="line-height:1.2">${a.title}</p>
+        <div class="flex-1 min-w-0 pr-3 py-2 flex flex-col justify-between gap-1">
+          <p class="font-heading font-semibold text-sm text-[#252525] leading-snug line-clamp-2">${a.title}</p>
           <p class="text-[11px] text-[#252525]/80 line-clamp-1 leading-normal">${a.excerpt || ''}</p>
           <p class="text-[10px] font-semibold text-[#252525] text-right">${a.date}</p>
         </div>
