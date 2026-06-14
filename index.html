@@ -31,24 +31,25 @@
         </div>
       </div>
       
-      <!-- Right column: Overlapping Polaroid Cards -->
-      <div class="flex-1 flex justify-center items-center relative w-full max-w-xs lg:max-w-md mx-auto hero-polaroid-wrap">
-        <!-- Polaroid Card 1 (Rotated) -->
-        <div class="absolute z-10 transform rotate-2 hero-polaroid-card">
-          <div class="card-polaroid-img-wrap hero-polaroid-img">
-            <img src="/assets/figma/hero-1.png" alt="Mécanographie Bull" class="card-polaroid-img">
+      <!-- Right column: Overlapping Polaroid Cards (hidden on very small screens, visible sm+) -->
+      <div class="hidden sm:flex flex-1 justify-center items-center relative h-56 sm:h-64 lg:h-[280px] w-full max-w-sm lg:max-w-[450px] mx-auto overflow-hidden">
+        <!-- Polaroid Card 1 (Rotated, back) -->
+        <div class="absolute z-10 transform rotate-2 translate-x-2 sm:translate-x-4 lg:translate-x-8 -translate-y-2 card-polaroid w-40 sm:w-[210px] lg:w-[260px]">
+          <div class="card-polaroid-img-wrap h-20 sm:h-[105px] lg:h-[130px]">
+            <img src="/assets/figma/hero-1.png" alt="M&#xe9;canographie Bull" class="card-polaroid-img">
           </div>
-          <p class="card-polaroid-caption" data-i18n="hero.photo_caption_1">Atelier mécanographique à cartes perforées</p>
+          <p class="card-polaroid-caption" data-i18n="hero.photo_caption_1">Atelier m&#xe9;canographique &#xe0; cartes perfor&#xe9;es</p>
         </div>
-        <!-- Polaroid Card 2 (Straight) -->
-        <div class="absolute z-20 hero-polaroid-card-2">
-          <div class="card-polaroid-img-wrap hero-polaroid-img">
+        <!-- Polaroid Card 2 (Straight, front) -->
+        <div class="absolute z-20 -translate-x-2 sm:-translate-x-6 lg:-translate-x-10 translate-y-3 sm:translate-y-4 card-polaroid w-40 sm:w-[210px] lg:w-[260px]">
+          <div class="card-polaroid-img-wrap h-20 sm:h-[105px] lg:h-[130px]">
             <img src="/assets/figma/hero-2.png" alt="Exposition permanente" class="card-polaroid-img">
           </div>
           <p class="card-polaroid-caption" data-i18n="hero.photo_caption_2">Exposition permanente dans nos locaux</p>
         </div>
       </div>
     </section>
+
 
     <!-- ─── Section 2: Partners ─────────────────────────────── -->
     <section id="partners" class="bg-white px-4 lg:px-36 py-8 border-b" style="border-color:rgba(112,36,36,0.1)">

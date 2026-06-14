@@ -245,37 +245,6 @@
     @apply font-heading text-[10px] font-medium text-[#252525] truncate max-w-full;
   }
 
-  /* --- Hero Polaroid Responsive Layout --- */
-  .hero-polaroid-wrap {
-    height: 220px;
-  }
-  .hero-polaroid-card {
-    right: 0;
-    top: 0;
-    width: 185px;
-  }
-  .hero-polaroid-card-2 {
-    left: 0;
-    bottom: 0;
-    width: 185px;
-  }
-  .hero-polaroid-img {
-    height: 100px !important;
-  }
-  @media (min-width: 640px) {
-    .hero-polaroid-wrap  { height: 250px; }
-    .hero-polaroid-card  { width: 210px; }
-    .hero-polaroid-card-2 { width: 210px; }
-    .hero-polaroid-img   { height: 115px !important; }
-  }
-  @media (min-width: 1024px) {
-    .hero-polaroid-wrap  { height: 290px; }
-    .hero-polaroid-card  { right: 0; top: 0; width: 270px; }
-    .hero-polaroid-card-2 { left: 0; bottom: 0; width: 270px; }
-    .hero-polaroid-img   { height: 150px !important; }
-  }
-
-
   .card-carousel-item {
     @apply p-3 rounded shadow flex flex-col gap-2 items-center w-full transition-all duration-300;
   }
