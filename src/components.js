@@ -6,23 +6,24 @@
 import './style.css'
 
 // ── Assets ──────────────────────────────────────────────────
-const logoUrl = '/assets/logo.png'
+const BASE_URL = import.meta.env.BASE_URL || '/'
+const logoUrl = `${BASE_URL}assets/logo.png`
 
 // ── Navbar HTML ─────────────────────────────────────────────
 function createNavbar(activePage = '') {
   const links = [
-    { label: 'Notre histoire', href: '/#histoire', key: 'histoire' },
-    { label: 'Nos missions',   href: '/#missions',  key: 'missions'  },
-    { label: "L'association",  href: '/association.html', key: 'association' },
-    { label: 'Actualités',     href: '/actualites.html',  key: 'actualites' },
-    { label: 'Contact',        href: '/contact.html',      key: 'contact'    },
+    { label: 'Notre histoire', href: `${BASE_URL}index.html#histoire`, key: 'histoire' },
+    { label: 'Nos missions',   href: `${BASE_URL}index.html#missions`,  key: 'missions'  },
+    { label: "L'association",  href: `${BASE_URL}association.html`, key: 'association' },
+    { label: 'Actualités',     href: `${BASE_URL}actualites.html`,  key: 'actualites' },
+    { label: 'Contact',        href: `${BASE_URL}contact.html`,      key: 'contact'    },
   ]
 
   const collectionLinks = [
-    { label: 'Mécanographie',  href: '/collections/mecanographie.html' },
-    { label: 'Imprimantes',    href: '/collections/imprimantes.html'    },
-    { label: 'Magnétographie', href: '/collections/magnetographie.html' },
-    { label: 'Musée',          href: '/collections/musee.html'          },
+    { label: 'Mécanographie',  href: `${BASE_URL}collections/mecanographie.html` },
+    { label: 'Imprimantes',    href: `${BASE_URL}collections/imprimantes.html`    },
+    { label: 'Magnétographie', href: `${BASE_URL}collections/magnetographie.html` },
+    { label: 'Musée',          href: `${BASE_URL}collections/musee.html`          },
   ]
 
   const navLinks = links.map(l =>
@@ -50,7 +51,7 @@ function createNavbar(activePage = '') {
   </a>
 
   <!-- Navbar -->
-  <nav id="navbar" class="navbar relative" role="navigation" aria-label="Navigation principale">
+  <nav id="navbar" class="navbar" role="navigation" aria-label="Navigation principale">
     
     <!-- Mobile Hamburger (shown only on mobile/tablet, positioned on the left) -->
     <button id="nav-hamburger" class="lg:hidden absolute left-4 top-1/2 -translate-y-1/2 flex flex-col gap-1.5 cursor-pointer p-2 bg-transparent border-none z-50" aria-label="Menu" aria-expanded="false">
@@ -61,7 +62,7 @@ function createNavbar(activePage = '') {
 
     <!-- Logo / Branding (centered on mobile, left-aligned on desktop) -->
     <div class="flex items-center justify-center lg:justify-start w-full lg:w-auto gap-3 flex-shrink-0">
-      <a href="/index.html" class="flex items-center gap-2 lg:gap-3">
+      <a href="${BASE_URL}index.html" class="flex items-center gap-2 lg:gap-3">
         <img id="navbar-logo" src="${logoUrl}" alt="Logo PB2I — Lion de Belfort" class="h-8 lg:h-12 w-auto object-contain" onerror="this.style.display='none'">
         <span class="font-heading font-extrabold text-white text-xl lg:text-sm leading-tight">PB2I</span>
       </a>
@@ -177,9 +178,11 @@ function createFooter() {
       <div class="flex flex-col gap-4 col-span-1">
         <h3 class="font-heading text-sm font-semibold text-white uppercase tracking-wider">Liens</h3>
         <nav class="flex flex-col gap-2">
-          <a href="/association.html" class="text-xs text-white/75 hover:text-white transition-colors">L'association</a>
-          <a href="/actualites.html"  class="text-xs text-white/75 hover:text-white transition-colors">Actualités</a>
-          <a href="/contact.html"     class="text-xs text-white/75 hover:text-white transition-colors">Contact</a>
+          <a href="${BASE_URL}index.html#histoire"    class="text-xs text-white/75 hover:text-white transition-colors">Notre histoire</a>
+          <a href="${BASE_URL}index.html#missions"    class="text-xs text-white/75 hover:text-white transition-colors">Nos missions</a>
+          <a href="${BASE_URL}association.html" class="text-xs text-white/75 hover:text-white transition-colors">L'association</a>
+          <a href="${BASE_URL}actualites.html"  class="text-xs text-white/75 hover:text-white transition-colors">Actualités</a>
+          <a href="${BASE_URL}contact.html"     class="text-xs text-white/75 hover:text-white transition-colors">Contact</a>
         </nav>
       </div>
 
@@ -187,8 +190,8 @@ function createFooter() {
       <div class="flex flex-col gap-4 col-span-1">
         <h3 class="font-heading text-sm font-semibold text-white uppercase tracking-wider">Mentions légales</h3>
         <nav class="flex flex-col gap-2">
-          <a href="/mentions-legales.html" class="text-xs text-white/75 hover:text-white transition-colors">Mentions légales</a>
-          <a href="/mentions-legales.html" class="text-xs text-white/75 hover:text-white transition-colors">Confidentialité</a>
+          <a href="${BASE_URL}mentions-legales.html" class="text-xs text-white/75 hover:text-white transition-colors">Mentions légales</a>
+          <a href="${BASE_URL}mentions-legales.html" class="text-xs text-white/75 hover:text-white transition-colors">Confidentialité</a>
         </nav>
       </div>
 

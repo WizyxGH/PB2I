@@ -3,7 +3,7 @@
  */
 
 import { mountComponents, initFadeIn } from '../components.js'
-import '../../data/fr/articles.json' // ensure bundled
+import '../../public/data/fr/articles.json' // ensure bundled
 
 window.PB2I_PAGE = 'home'
 
@@ -64,20 +64,21 @@ async function loadNews() {
 
   try {
     const lang = localStorage.getItem('pb2i_lang') || 'fr'
-    const res  = await fetch(`/data/${lang}/articles.json`)
+    const baseUrl = import.meta.env.BASE_URL || '/'
+    const res  = await fetch(`${baseUrl}data/${lang}/articles.json`)
     const data = await res.json()
     const articles = data.articles?.slice(0, 3) || []
 
     newsList.innerHTML = articles.map(a => `
-      <a href="/article.html?id=${a.id}"
-        class="flex items-start gap-3 py-3.5 border-b last:border-0 cursor-pointer hover:opacity-80 transition-opacity duration-150 no-underline"
-        style="border-color:rgba(112,36,36,0.12)">
+      <a href="${baseUrl}article.html?id=${a.id}"
+        class="bg-white border-2 border-[#252525] flex gap-4 items-start overflow-hidden relative w-full lg:w-[350px] h-[100px] shrink-0 no-underline hover:scale-[1.01] transition-transform duration-150">
         <img src="${a.thumbnail}" alt="${a.title}"
-          class="w-16 h-14 object-cover rounded-lg flex-shrink-0"
+          class="w-[100px] h-[100px] object-cover shrink-0"
           onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?w=200&q=60'">
-        <div class="flex-1 min-w-0">
-          <p class="text-xs mb-0.5" style="color:rgba(37,37,37,0.5)">${a.date}</p>
-          <p class="text-sm font-semibold leading-snug" style="color:var(--color-text-body);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">${a.title}</p>
+        <div class="flex-1 min-w-0 pr-4 py-3 flex flex-col justify-between h-full">
+          <p class="font-heading font-semibold text-sm text-[#252525] truncate" style="line-height:1.2">${a.title}</p>
+          <p class="text-[11px] text-[#252525]/80 line-clamp-1 leading-normal">${a.excerpt || ''}</p>
+          <p class="text-[10px] font-semibold text-[#252525] text-right">${a.date}</p>
         </div>
       </a>
     `).join('')

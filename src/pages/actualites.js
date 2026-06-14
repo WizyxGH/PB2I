@@ -13,7 +13,8 @@ async function loadArticles() {
 
   try {
     const lang = localStorage.getItem('pb2i_lang') || 'fr'
-    const res  = await fetch(`/data/${lang}/articles.json`)
+    const baseUrl = import.meta.env.BASE_URL || '/'
+    const res  = await fetch(`${baseUrl}data/${lang}/articles.json`)
     const data = await res.json()
     const articles = data.articles || []
 
@@ -24,7 +25,7 @@ async function loadArticles() {
     }
 
     grid.innerHTML = articles.map((a, i) => `
-      <a href="/article.html?id=${a.id}" class="card-article no-underline" data-fade style="animation-delay:${i*60}ms">
+      <a href="${baseUrl}article.html?id=${a.id}" class="card-article no-underline" data-fade style="animation-delay:${i*60}ms">
         <div class="card-article-img-wrap">
           <img src="${a.thumbnail}" alt="${a.title}" class="card-article-img"
             onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=70'">

@@ -215,6 +215,68 @@
   .footer-wave svg {
     @apply w-full h-full;
   }
+
+  /* --- Figma Alignment custom classes --- */
+  .bg-hero-gradient {
+    background: linear-gradient(to top, #fcf1e2 0%, #f8f4f0 100%);
+  }
+
+  .btn-beige {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg text-sm font-semibold transition-all duration-200 border border-amber-200/20 cursor-pointer;
+    background: #fbf1e4;
+    color: #252525;
+    font-family: var(--font-body);
+  }
+  .btn-beige:hover {
+    @apply -translate-y-px shadow-md;
+    background: #f5e8d6;
+  }
+
+  .card-polaroid {
+    @apply bg-white p-3 rounded shadow-md flex flex-col gap-2 items-center w-full max-w-[391px] border border-gray-100;
+  }
+  .card-polaroid-img-wrap {
+    @apply w-full h-[173px] overflow-hidden relative;
+  }
+  .card-polaroid-img {
+    @apply w-full h-full object-cover;
+  }
+  .card-polaroid-caption {
+    @apply font-heading text-[10px] font-medium text-[#252525] truncate max-w-full;
+  }
+
+  .card-carousel-item {
+    @apply p-3 rounded shadow flex flex-col gap-2 items-center w-full transition-all duration-300;
+  }
+  .card-carousel-item:hover {
+    @apply -translate-y-1 shadow-lg;
+  }
+  .card-carousel-item.bg-beige {
+    background: #fbf1e4;
+    color: #252525;
+  }
+  .card-carousel-item.bg-red {
+    background: #702424;
+    color: white;
+  }
+
+  .line-separator {
+    background-image: url('/assets/figma/line-separator.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 12px;
+    width: 100%;
+  }
+
+  .vertical-divider {
+    background-image: url('/assets/figma/vertical-divider.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 12px;
+  }
 }
 
 /* ============================================================

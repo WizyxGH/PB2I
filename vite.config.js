@@ -19,6 +19,7 @@ export default defineConfig(({ command }) => ({
         actualites:    resolve(__dirname, 'actualites.html'),
         article:       resolve(__dirname, 'article.html'),
         contact:       resolve(__dirname, 'contact.html'),
+        mentionsLegales:resolve(__dirname, 'mentions-legales.html'),
         mecanographie: resolve(__dirname, 'collections/mecanographie.html'),
         imprimantes:   resolve(__dirname, 'collections/imprimantes.html'),
         magnetographie:resolve(__dirname, 'collections/magnetographie.html'),

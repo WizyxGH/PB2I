@@ -44,7 +44,8 @@ async function loadMachines() {
   if (!grid) return
   try {
     const lang = localStorage.getItem('pb2i_lang') || 'fr'
-    const res  = await fetch(`/data/${lang}/collections/musee.json`)
+    const baseUrl = import.meta.env.BASE_URL || '/'
+    const res  = await fetch(`${baseUrl}data/${lang}/collections/musee.json`)
     const data = await res.json()
     const machines = data.machines || []
 
