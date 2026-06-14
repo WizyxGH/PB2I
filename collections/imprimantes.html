@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Imprimantes — Collections PB2I. Imprimantes à impact Bull, tambour, bande et magnétographiques." />
+  <title>Imprimantes — Collections PB2I</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <script type="module" src="/src/pages/imprimantes.js"></script>
+</head>
+<body class="bg-white">
+<main id="main-content" class="page-offset">
+
+  <!-- Header -->
+  <div class="px-4 lg:px-36 py-12 text-center border-b" style="border-color:rgba(112,36,36,0.1)">
+    <p class="text-xs font-semibold uppercase tracking-widest mb-3" style="color:var(--color-primary)">Nos collections</p>
+    <h1 class="page-title">Imprimantes</h1>
+  </div>
+
+  <!-- Content -->
+  <div class="px-4 lg:px-36 py-10 max-w-5xl">
+    <p class="text-sm leading-relaxed mb-10" style="color:var(--color-text-muted)">
+      Notre collection d'imprimantes retrace l'évolution des technologies d'impression de Bull à Belfort,
+      des premières imprimantes à impact sur tambour aux imprimantes magnétographiques révolutionnaires.
+    </p>
+
+    <!-- Familles d'imprimantes -->
+    <section class="mb-10">
+      <h2 class="section-title mb-6">Imprimantes à impact sur tambour</h2>
+      <p class="text-sm leading-relaxed mb-6" style="color:var(--color-text-muted)">
+        Les imprimantes à impact sur tambour utilisent un tambour cylindrique sur lequel sont gravés tous
+        les caractères en relief. À chaque tour du tambour, une série de marteaux frappe le ruban encré
+        au bon moment pour imprimer les caractères souhaités. Cette technologie robuste était capable
+        d'imprimer plusieurs centaines de lignes par minute.
+      </p>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
+        <div class="card-machine cursor-default" data-fade>
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=200&q=50"
+            alt="Série 300 T1" class="w-24 h-20 object-contain mx-auto"
+            onerror="this.src='https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=200&q=50'">
+          <p class="font-heading font-bold text-xs text-center" style="color:var(--color-text-body)">Série 300 T1<br><span class="font-normal text-gray-500">300 l/min</span></p>
+        </div>
+        <div class="card-machine cursor-default" data-fade>
+          <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=200&q=50"
+            alt="I51" class="w-24 h-20 object-contain mx-auto">
+          <p class="font-heading font-bold text-xs text-center" style="color:var(--color-text-body)">I51<br><span class="font-normal text-gray-500">500 l/min</span></p>
+        </div>
+        <div class="card-machine cursor-default" data-fade>
+          <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=200&q=50"
+            alt="I41" class="w-24 h-20 object-contain mx-auto">
+          <p class="font-heading font-bold text-xs text-center" style="color:var(--color-text-body)">I41<br><span class="font-normal text-gray-500">400 l/min</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-10 border-t pt-10" style="border-color:rgba(112,36,36,0.1)">
+      <h2 class="section-title mb-6">Imprimantes à impact sur bande</h2>
+      <p class="text-sm leading-relaxed mb-6" style="color:var(--color-text-muted)">
+        La technologie à bande offre une durée de vie supérieure au tambour grâce à la métallisation
+        des caractères. La bande peut être échangée en quelques minutes pour modifier le jeu de caractères.
+        Bull a décliné cette technologie en plusieurs modèles aux débits variés.
+      </p>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
+        <div class="card-machine cursor-default" data-fade>
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=200&q=50"
+            alt="PR46" class="w-24 h-20 object-contain mx-auto">
+          <p class="font-heading font-bold text-xs text-center" style="color:var(--color-text-body)">PR46<br><span class="font-normal text-gray-500">460 l/min</span></p>
+        </div>
+        <div class="card-machine cursor-default" data-fade>
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&q=50"
+            alt="PR54" class="w-24 h-20 object-contain mx-auto">
+          <p class="font-heading font-bold text-xs text-center" style="color:var(--color-text-body)">PR54<br><span class="font-normal text-gray-500">540 l/min</span></p>
+        </div>
+        <div class="card-machine cursor-default" data-fade>
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=200&q=50"
+            alt="PR71" class="w-24 h-20 object-contain mx-auto">
+          <p class="font-heading font-bold text-xs text-center" style="color:var(--color-text-body)">PR71<br><span class="font-normal text-gray-500">710 l/min</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Full image -->
+    <div class="my-10 rounded-2xl overflow-hidden shadow-md" style="background:var(--color-warm-bg);padding:1.5rem">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=70"
+        alt="Imprimantes Bull" class="w-full rounded-xl object-cover max-h-72 mx-auto shadow-sm">
+      <p class="text-xs text-center mt-3 italic" style="color:rgba(37,37,37,0.5)">Galerie d'imprimantes Bull — collection PB2I</p>
+    </div>
+
+    <!-- Magnétographie section -->
+    <section class="mb-10 border-t pt-10" style="border-color:rgba(112,36,36,0.1)">
+      <h2 class="section-title mb-6">Imprimante magnétographique MP6090</h2>
+      <p class="text-sm leading-relaxed mb-6" style="color:var(--color-text-muted)">
+        La MP6090 est l'aboutissement de la technologie d'impression Bull à Belfort. Contrairement aux
+        imprimantes à impact, elle utilise un processus magnétique : un tambour magnétisable reçoit
+        l'image de la page à imprimer, puis de la poudre magnétique (toner) est déposée et fixée sur
+        le papier par chaleur. Débit record de 6090 lignes par minute.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="card-machine cursor-default gap-4" data-fade>
+          <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=300&q=60"
+            alt="MP6090" class="w-36 h-28 object-contain mx-auto">
+          <div>
+            <p class="font-heading font-bold text-base text-center mb-1" style="color:var(--color-text-body)">Imprimante non-impact<br>magnétographique MP6090</p>
+            <p class="text-xs text-center" style="color:rgba(37,37,37,0.5)">6090 lignes par minute</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download -->
+    <section class="mb-10 border-t pt-10" style="border-color:rgba(112,36,36,0.1)">
+      <h2 class="section-title mb-6">Documentation</h2>
+      <div class="flex items-center gap-8 rounded-2xl p-8" style="background:var(--color-warm-bg);border-left:4px solid var(--color-primary)">
+        <div class="w-24 h-32 rounded-lg flex-shrink-0 flex items-center justify-center shadow-md"
+          style="background:var(--color-primary)">
+          <svg class="w-10 h-10 fill-white" viewBox="0 0 24 24">
+            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM12 18l-4-4h2.5v-4h3v4H16l-4 4z"/>
+          </svg>
+        </div>
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-widest mb-2" style="color:var(--color-primary)">Télécharger</p>
+          <h3 class="font-heading font-bold text-xl mb-2" style="color:var(--color-text-body)">Catalogue des imprimantes Bull</h3>
+          <p class="text-sm mb-4" style="color:var(--color-text-muted)">Documentation technique complète des imprimantes de la gamme Bull produites à Belfort.</p>
+          <button class="btn-primary text-sm" onclick="alert('Documentation en cours de numérisation.')">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+            Télécharger le PDF
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</main>
+</body>
+</html>

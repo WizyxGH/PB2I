@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;0,7..72,700;0,7..72,800;1,7..72,400&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/* ============================================================
+   PB2I — Design Tokens (Tailwind v4 CSS theme)
+   ============================================================ */
+
+@theme {
+  /* --- Brand Colors --- */
+  --color-primary:       #702424;
+  --color-primary-dark:  #5a1c1c;
+  --color-primary-light: #8a3030;
+  --color-primary-50:    #fdf2f2;
+  --color-warm-bg:       #F5F0EB;
+  --color-warm-card:     #FAF7F4;
+  --color-warm-200:      #EDE4DA;
+  --color-text-body:     #252525;
+  --color-text-muted:    rgba(37, 37, 37, 0.7);
+
+  /* --- Fonts --- */
+  --font-heading: 'Literata', Georgia, serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+
+  /* --- Custom Spacing --- */
+  --spacing-18: 4.5rem;
+  --spacing-22: 5.5rem;
+  --spacing-30: 7.5rem;
+  --spacing-36: 9rem;
+
+  /* --- Border radius --- */
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
+
+  /* --- Shadows --- */
+  --shadow-card: 0 4px 20px rgba(0,0,0,0.08);
+  --shadow-card-hover: 0 8px 32px rgba(0,0,0,0.16);
+  --shadow-modal: 0 24px 64px rgba(0,0,0,0.25);
+  --shadow-nav: 0 2px 16px rgba(0,0,0,0.25);
+
+  /* --- Navbar height --- */
+  --navbar-h:    5rem;
+  --navbar-mob:  4rem;
+}
+
+
+/* ============================================================
+   Base Styles
+   ============================================================ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--color-text-body);
+    background: white;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+  }
+
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: var(--color-warm-bg); }
+  ::-webkit-scrollbar-thumb { background: var(--color-primary); border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--color-primary-dark); }
+}
+
+/* ============================================================
+   Component Layer
+   ============================================================ */
+@layer components {
+
+  /* --- Navbar --- */
+  .navbar {
+    @apply fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 lg:px-36 h-16 lg:h-20;
+    background: var(--color-primary);
+    box-shadow: var(--shadow-nav);
+  }
+
+  .navbar-link {
+    @apply text-sm font-semibold text-white/90 whitespace-nowrap relative transition-all duration-200 hover:text-white;
+    font-family: var(--font-body);
+  }
+
+  .navbar-link::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 right-0 h-0.5 bg-white scale-x-0 transition-transform duration-200 origin-left;
+  }
+
+  .navbar-link:hover::after,
+  .navbar-link.active::after {
+    @apply scale-x-100;
+  }
+
+  /* --- Buttons --- */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white transition-all duration-200;
+    background: var(--color-primary);
+  }
+  .btn-primary:hover {
+    background: var(--color-primary-dark);
+    @apply -translate-y-px shadow-lg;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 border-2;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+  .btn-outline:hover {
+    background: var(--color-primary);
+    @apply text-white -translate-y-px;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 text-sm font-semibold transition-all duration-200;
+    color: var(--color-primary);
+  }
+  .btn-ghost:hover {
+    @apply gap-3;
+  }
+  .btn-ghost:hover svg {
+    @apply translate-x-1;
+  }
+
+  /* --- Page Title --- */
+  .page-title {
+    @apply text-4xl font-extrabold uppercase tracking-wider text-center;
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+  }
+
+  .section-title {
+    @apply text-xl font-bold uppercase tracking-wide;
+    font-family: var(--font-body);
+  }
+
+  /* --- Cards: Article --- */
+  .card-article {
+    @apply bg-white rounded-xl overflow-hidden flex flex-col cursor-pointer transition-all duration-300;
+    box-shadow: var(--shadow-card);
+  }
+  .card-article:hover {
+    @apply -translate-y-1;
+    box-shadow: var(--shadow-card-hover);
+  }
+  .card-article-img-wrap {
+    @apply relative overflow-hidden h-48;
+  }
+  .card-article-img-wrap::after {
+    content: '';
+    @apply absolute bottom-0 left-0 right-0 h-1 scale-x-0 transition-transform duration-300 origin-left;
+    background: var(--color-primary);
+  }
+  .card-article:hover .card-article-img-wrap::after {
+    @apply scale-x-100;
+  }
+  .card-article-img {
+    @apply w-full h-full object-cover transition-transform duration-500;
+  }
+  .card-article:hover .card-article-img {
+    @apply scale-105;
+  }
+
+  /* --- Cards: Machine --- */
+  .card-machine {
+    @apply rounded-xl flex flex-col items-center p-5 gap-3 cursor-pointer transition-all duration-300 border-2 border-transparent text-center;
+    background: var(--color-warm-card);
+  }
+  .card-machine:hover {
+    @apply -translate-y-1;
+    box-shadow: var(--shadow-card);
+    border-color: var(--color-primary);
+  }
+
+  /* --- Cards: Video --- */
+  .card-video {
+    @apply rounded-xl overflow-hidden relative cursor-pointer;
+    aspect-ratio: 16/9;
+  }
+  .card-video-thumb {
+    @apply w-full h-full object-cover transition-all duration-500;
+  }
+  .card-video:hover .card-video-thumb {
+    @apply scale-105 opacity-80;
+  }
+
+  /* --- Form --- */
+  .form-input {
+    @apply w-full px-4 py-3 border-2 rounded-lg text-sm transition-all duration-200 outline-none bg-white;
+    border-color: rgba(112, 36, 36, 0.2);
+    font-family: var(--font-body);
+    color: var(--color-text-body);
+  }
+  .form-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(112, 36, 36, 0.12);
+  }
+
+  .form-label {
+    @apply block text-sm font-semibold mb-1.5;
+    color: var(--color-text-body);
+  }
+
+  /* --- Footer Wave --- */
+  .footer-wave {
+    @apply block w-full overflow-hidden leading-none;
+    height: 60px;
+  }
+  .footer-wave svg {
+    @apply w-full h-full;
+  }
+}
+
+/* ============================================================
+   Utilities Layer
+   ============================================================ */
+@layer utilities {
+  .text-primary  { color: var(--color-primary); }
+  .bg-primary    { background-color: var(--color-primary); }
+  .bg-warm       { background-color: var(--color-warm-bg); }
+  .bg-warm-card  { background-color: var(--color-warm-card); }
+  .border-primary { border-color: var(--color-primary); }
+  .font-heading  { font-family: var(--font-heading); }
+  .font-body     { font-family: var(--font-body); }
+
+  .page-offset   { padding-top: var(--navbar-mob); }
+  @media (min-width: 1024px) {
+    .page-offset { padding-top: var(--navbar-h); }
+  }
+
+  /* Animated underline utility */
+  .underline-anim {
+    @apply relative;
+  }
+  .underline-anim::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 h-0.5 w-0 transition-all duration-300;
+    background: currentColor;
+  }
+  .underline-anim:hover::after {
+    @apply w-full;
+  }
+
+  /* Skeleton loading */
+  .skeleton {
+    background: linear-gradient(90deg, var(--color-warm-bg) 25%, var(--color-warm-200) 50%, var(--color-warm-bg) 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+  }
+
+  @keyframes skeleton-loading {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.96); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+
+  .animate-fade-up  { animation: fadeInUp 0.4s ease both; }
+  .animate-scale-in { animation: scaleIn 0.25s ease both; }
+}

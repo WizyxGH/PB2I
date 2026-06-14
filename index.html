@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Patrimoine Belfortain de l'Industrie Informatique — Association dédiée à la préservation du patrimoine industriel informatique de Belfort." />
+  <title>PB2I — Patrimoine Belfortain de l'Industrie Informatique</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script type="module" src="/src/pages/home.js"></script>
+</head>
+<body class="bg-white">
+
+  <!-- Main Content (navbar injected before this) -->
+  <main id="main-content" class="page-offset">
+
+    <!-- ─── Hero / Who are we ─────────────────────────────── -->
+    <section id="histoire" style="background:var(--color-warm-bg)"
+      class="flex flex-col lg:flex-row gap-0 lg:gap-12 px-4 lg:px-36 py-12 lg:py-16 items-start">
+
+      <!-- Left: main text -->
+      <div class="flex-[2] min-w-0">
+        <h1 class="font-heading font-extrabold text-3xl lg:text-4xl text-gray-900 leading-tight mb-6" data-i18n="hero.title">
+          Patrimoine Belfortain de l'Industrie Informatique
+        </h1>
+        <p class="text-sm leading-relaxed mb-8" style="color:var(--color-text-muted)" data-i18n="whoarewe.body">
+          Notre groupe actif se compose de bénévoles assidus et de quelques sympathisants, au sein du
+          Patrimoine Belfortain de l'Industrie Informatique. L'essentiel de notre activité porte sur
+          la poursuite de travaux de maintien en condition des machines restaurées, le développement de
+          démonstrations et la présentation de notre patrimoine industriel.
+          Nous disposons d'un atelier mécanographique à cartes perforées des années 1950, installé dans
+          nos locaux en exposition permanente, animé par plusieurs techniciens, ainsi que d'une importante
+          documentation d'entreprise archivée.
+        </p>
+        <a href="/association.html" class="btn-primary" data-i18n="whoarewe.cta">En savoir plus →</a>
+      </div>
+
+      <!-- Right: latest news -->
+      <aside class="flex-1 w-full lg:min-w-[340px] bg-white rounded-2xl p-6 shadow-sm self-stretch flex flex-col">
+        <h2 class="font-heading font-bold text-xl text-gray-900 mb-6" data-i18n="news.title">Dernières actualités</h2>
+        <div id="news-list" class="flex flex-col flex-1">
+          <!-- Injected by JS -->
+          <div class="skeleton h-16 mb-3 rounded-lg"></div>
+          <div class="skeleton h-16 mb-3 rounded-lg"></div>
+          <div class="skeleton h-16 rounded-lg"></div>
+        </div>
+        <div class="flex justify-end pt-4 border-t mt-4" style="border-color:rgba(112,36,36,0.15)">
+          <a href="/actualites.html" class="btn-ghost flex items-center gap-2">
+            Voir toutes les actualités
+            <svg class="w-4 h-4 fill-current transition-transform duration-200" viewBox="0 0 20 20">
+              <path d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"/>
+            </svg>
+          </a>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ─── Photo band ─────────────────────────────────────── -->
+    <div class="relative overflow-hidden h-80 lg:h-[420px]">
+      <img id="hero-photo"
+        src="/assets/images/musee-panorama.jpg"
+        alt="Vue du musée PB2I — machines mécanographiques"
+        class="w-full h-full object-cover"
+        onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?w=1440&q=80'">
+      <div class="absolute inset-0"
+        style="background:linear-gradient(to bottom, transparent 0%, rgba(112,36,36,0.15) 60%, rgba(112,36,36,0.45) 100%)">
+      </div>
+      <div class="absolute bottom-8 left-4 lg:left-36 text-white">
+        <p class="text-sm font-semibold uppercase tracking-widest opacity-80">Depuis 1993</p>
+        <p class="font-heading font-bold text-2xl lg:text-3xl leading-tight">Préserver la mémoire de l'industrie<br>informatique à Belfort</p>
+      </div>
+    </div>
+
+    <!-- ─── Collections section ───────────────────────────── -->
+    <section id="collections" class="px-4 lg:px-36 py-16">
+      <div class="text-center mb-10">
+        <p class="text-xs font-semibold uppercase tracking-widest mb-2" style="color:var(--color-primary)">Nos collections</p>
+        <h2 class="font-heading font-bold text-3xl text-gray-900" data-i18n="collections.title">Les collections du musée</h2>
+      </div>
+
+      <!-- Carousel wrapper -->
+      <div id="collections-carousel" class="relative">
+        <div class="overflow-hidden rounded-2xl">
+          <div id="carousel-track" class="flex gap-4 transition-transform duration-500 ease-out">
+
+            <!-- Card: Mécanographie -->
+            <div class="flex-[0_0_calc(33.333%-12px)] min-w-0 card-image-wrap" data-fade>
+              <a href="/collections/mecanographie.html"
+                class="relative block rounded-xl overflow-hidden cursor-pointer group h-56">
+                <img src="/assets/images/mecanographie.jpg" alt="Mécanographie"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  onerror="this.src='https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&q=70'">
+                <div class="absolute inset-0 flex items-end p-4"
+                  style="background:linear-gradient(to top, rgba(112,36,36,0.85) 0%, transparent 55%)">
+                  <div>
+                    <p class="text-white font-heading font-bold text-lg leading-tight translate-y-1 group-hover:translate-y-0 transition-transform duration-300">Mécanographie</p>
+                    <p class="text-white/80 text-xs mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Cartes perforées, tabulatrices…</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card: Imprimantes -->
+            <div class="flex-[0_0_calc(33.333%-12px)] min-w-0 card-image-wrap" data-fade>
+              <a href="/collections/imprimantes.html"
+                class="relative block rounded-xl overflow-hidden cursor-pointer group h-56">
+                <img src="/assets/images/imprimantes.jpg" alt="Imprimantes"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=70'">
+                <div class="absolute inset-0 flex items-end p-4"
+                  style="background:linear-gradient(to top, rgba(112,36,36,0.85) 0%, transparent 55%)">
+                  <div>
+                    <p class="text-white font-heading font-bold text-lg leading-tight translate-y-1 group-hover:translate-y-0 transition-transform duration-300">Imprimantes</p>
+                    <p class="text-white/80 text-xs mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Imprimantes à impact, à bande…</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card: Magnétographie -->
+            <div class="flex-[0_0_calc(33.333%-12px)] min-w-0 card-image-wrap" data-fade>
+              <a href="/collections/magnetographie.html"
+                class="relative block rounded-xl overflow-hidden cursor-pointer group h-56">
+                <img src="/assets/images/magnetographie.jpg" alt="Magnétographie"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=70'">
+                <div class="absolute inset-0 flex items-end p-4"
+                  style="background:linear-gradient(to top, rgba(112,36,36,0.85) 0%, transparent 55%)">
+                  <div>
+                    <p class="text-white font-heading font-bold text-lg leading-tight translate-y-1 group-hover:translate-y-0 transition-transform duration-300">Magnétographie</p>
+                    <p class="text-white/80 text-xs mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Moteurs, saisie de données…</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card: Musée -->
+            <div class="flex-[0_0_calc(33.333%-12px)] min-w-0 card-image-wrap" data-fade>
+              <a href="/collections/musee.html"
+                class="relative block rounded-xl overflow-hidden cursor-pointer group h-56">
+                <img src="/assets/images/musee.jpg" alt="Musée"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  onerror="this.src='https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&q=70'">
+                <div class="absolute inset-0 flex items-end p-4"
+                  style="background:linear-gradient(to top, rgba(112,36,36,0.85) 0%, transparent 55%)">
+                  <div>
+                    <p class="text-white font-heading font-bold text-lg leading-tight translate-y-1 group-hover:translate-y-0 transition-transform duration-300">Musée</p>
+                    <p class="text-white/80 text-xs mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Perforatrices, tabulatrices…</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="flex items-center justify-center gap-4 mt-6">
+          <button id="carousel-prev"
+            class="w-10 h-10 rounded-full border-2 flex items-center justify-center transition-all duration-200 hover:-translate-y-px"
+            style="border-color:var(--color-primary);color:var(--color-primary)"
+            aria-label="Précédent">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+              <path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"/>
+            </svg>
+          </button>
+          <div class="flex gap-2" id="carousel-dots">
+            <button class="carousel-dot w-2 h-2 rounded-full transition-all duration-200" style="background:var(--color-primary);transform:scale(1.3)" aria-label="Slide 1"></button>
+            <button class="carousel-dot w-2 h-2 rounded-full transition-all duration-200" style="background:rgba(112,36,36,0.25)" aria-label="Slide 2"></button>
+          </div>
+          <button id="carousel-next"
+            class="w-10 h-10 rounded-full border-2 flex items-center justify-center transition-all duration-200 hover:-translate-y-px"
+            style="border-color:var(--color-primary);color:var(--color-primary)"
+            aria-label="Suivant">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+              <path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="text-center mt-8">
+        <a href="/collections/musee.html" class="btn-outline">Voir toutes les collections</a>
+      </div>
+    </section>
+
+    <!-- ─── Sponsors section ──────────────────────────────── -->
+    <section id="missions" style="background:var(--color-warm-bg)" class="px-4 lg:px-36 py-12">
+      <div class="text-center mb-8">
+        <p class="text-xs font-semibold uppercase tracking-widest mb-2" style="color:var(--color-primary)">Nos partenaires</p>
+        <h2 class="font-heading font-bold text-2xl text-gray-900">Ils nous soutiennent</h2>
+      </div>
+      <div class="flex items-center justify-center gap-12 flex-wrap">
+        <img src="/assets/images/sponsor-territoire.png" alt="Territoire de Belfort — Le Département"
+          class="h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
+          onerror="this.parentElement.style.display='none'">
+        <img src="/assets/images/sponsor-belfort.png" alt="Ville de Belfort"
+          class="h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
+          onerror="this.parentElement.style.display='none'">
+      </div>
+    </section>
+
+    <!-- ─── Map / Contact section ─────────────────────────── -->
+    <section style="background:var(--color-warm-bg)"
+      class="px-4 lg:px-36 py-16 flex flex-col lg:flex-row items-start gap-12 lg:gap-16">
+
+      <!-- Address -->
+      <div class="flex-1">
+        <h2 class="font-heading font-bold text-2xl text-gray-900 mb-8" data-i18n="map.title">Comment s'y rendre ?</h2>
+        <div class="flex flex-col gap-6 text-sm" style="color:var(--color-text-muted)">
+          <div>
+            <p class="font-semibold text-gray-900 mb-1">Adresse :</p>
+            <p class="leading-loose">
+              ASSOCIATION PB2I<br>
+              <strong>Techn'hom 2 – Bâtiment 9</strong><br>
+              <strong>5 rue Jacqueline AURIOL, 90000 BELFORT</strong>
+            </p>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-900 mb-1">Permanences :</p>
+            <p>Mardi et jeudi matin de 9 h à 12 h.<br>(Hors juillet / août)</p>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-900 mb-1">Pour s'y rendre :</p>
+            <p>Passer par l'avenue du Maréchal Juin<br>
+            Entrer dans le parking indiqué :<br>
+            GENERAL ELECTRIC<br>PARKING DU PERSONNEL</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider (desktop only) -->
+      <div class="hidden lg:block w-px self-stretch" style="background:rgba(112,36,36,0.2)"></div>
+
+      <!-- Map -->
+      <div class="flex-1 w-full">
+        <div class="rounded-2xl overflow-hidden shadow-md" style="height:320px">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2692.6!2d6.8517!3d47.6327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDM3JzU3LjciTiA2wrA1MScwNi4xIkU!5e0!3m2!1sfr!2sfr!4v1"
+            width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Localisation PB2I — Techn'hom 2, Belfort"></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
