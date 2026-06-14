@@ -15,6 +15,8 @@ export default defineConfig(({ command }) => ({
     rollupOptions: {
       input: {
         main:          resolve(__dirname, 'index.html'),
+        notreHistoire: resolve(__dirname, 'notre-histoire.html'),
+        nosMissions:   resolve(__dirname, 'nos-missions.html'),
         association:   resolve(__dirname, 'association.html'),
         actualites:    resolve(__dirname, 'actualites.html'),
         article:       resolve(__dirname, 'article.html'),

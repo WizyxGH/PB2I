@@ -12,8 +12,8 @@ const logoUrl = `${BASE_URL}assets/logo.png`
 // ── Navbar HTML ─────────────────────────────────────────────
 function createNavbar(activePage = '') {
   const links = [
-    { label: 'Notre histoire', href: `${BASE_URL}index.html#histoire`, key: 'histoire' },
-    { label: 'Nos missions',   href: `${BASE_URL}index.html#missions`,  key: 'missions'  },
+    { label: 'Notre histoire', href: `${BASE_URL}notre-histoire.html`, key: 'histoire' },
+    { label: 'Nos missions',   href: `${BASE_URL}nos-missions.html`,   key: 'missions'  },
     { label: "L'association",  href: `${BASE_URL}association.html`, key: 'association' },
     { label: 'Actualités',     href: `${BASE_URL}actualites.html`,  key: 'actualites' },
     { label: 'Contact',        href: `${BASE_URL}contact.html`,      key: 'contact'    },
@@ -178,8 +178,8 @@ function createFooter() {
       <div class="flex flex-col gap-4 col-span-1">
         <h3 class="font-heading text-sm font-semibold text-white uppercase tracking-wider">Liens</h3>
         <nav class="flex flex-col gap-2">
-          <a href="${BASE_URL}index.html#histoire"    class="text-xs text-white/75 hover:text-white transition-colors">Notre histoire</a>
-          <a href="${BASE_URL}index.html#missions"    class="text-xs text-white/75 hover:text-white transition-colors">Nos missions</a>
+          <a href="${BASE_URL}notre-histoire.html" class="text-xs text-white/75 hover:text-white transition-colors">Notre histoire</a>
+          <a href="${BASE_URL}nos-missions.html"   class="text-xs text-white/75 hover:text-white transition-colors">Nos missions</a>
           <a href="${BASE_URL}association.html" class="text-xs text-white/75 hover:text-white transition-colors">L'association</a>
           <a href="${BASE_URL}actualites.html"  class="text-xs text-white/75 hover:text-white transition-colors">Actualités</a>
           <a href="${BASE_URL}contact.html"     class="text-xs text-white/75 hover:text-white transition-colors">Contact</a>
