@@ -53,7 +53,7 @@ export function createFooter() {
               <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
             </svg>
           </a>
-          <a href="mailto:contact@pb2i.fr" aria-label="Email"
+          <a href="mailto:pb2i.belfort@gmail.com" aria-label="Email"
             class="w-10 h-10 bg-white rounded-lg flex items-center justify-center transition-transform hover:-translate-y-0.5 shadow-sm hover:shadow-md">
             <svg class="w-5 h-5" fill="none" stroke="#702424" stroke-width="2" viewBox="0 0 24 24">
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>

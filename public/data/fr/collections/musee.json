@@ -3,128 +3,110 @@
     {
       "id": "pelerod",
       "name": "Perforatrice de cartes (Pelerod)",
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=60",
-      "description": "La perforatrice Pelerod est une machine servant à perforer des cartes selon un code numérique ou alphabétique. Chaque colonne de la carte peut recevoir une perforation correspondant à un chiffre (0 à 9) ou à une lettre. L'opérateur tape sur un clavier semblable à une machine à écrire et la machine perfore automatiquement la carte.",
-      "year": "~1960"
+      "image": "/public/assets/collections/museum/Pelerod.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "vinod",
       "name": "Vérificatrice de cartes (Vinod)",
-      "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=60",
-      "description": "La vérificatrice Vinod permet de contrôler la conformité des perforations effectuées par la perforatrice. L'opérateur retape le même texte sur le clavier ; si une différence est détectée entre la saisie et la perforation existante, la machine s'arrête et l'erreur est signalée.",
-      "year": "~1960"
+      "image": "/public/assets/collections/museum/Vinod.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "trad80",
       "name": "Traductrice 80 colonnes (Trad 80)",
-      "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&q=60",
-      "description": "La traductrice 80 colonnes lit les perforations d'une carte et les traduit en caractères imprimés directement sur le bord supérieur de la carte. Cela permet au personnel de lire le contenu sans avoir à décoder les perforations.",
-      "year": "~1965"
+      "image": "/public/assets/collections/museum/Trad 80.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "prd",
       "name": "Perforatrice Reproductrice Duplicatrice (P.R.D.)",
-      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=60",
-      "description": "La P.R.D. combine trois fonctions : la perforation de nouvelles cartes, la reproduction fidèle d'une carte existante, et la duplication en série d'une même information sur plusieurs cartes. Indispensable pour les traitements en batch.",
-      "year": "~1962"
+      "image": "/public/assets/collections/museum/Perforatrice Reproductrice Duplicatrice.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "trieuse-e12",
       "name": "Trieuse E12",
-      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=60",
-      "description": "La trieuse E12 permet de classer les cartes perforées dans l'ordre souhaité (numérique ou alphabétique) selon une colonne de référence choisie par l'opérateur. La machine peut trier jusqu'à 12 paquets simultanément.",
-      "year": "~1963"
+      "image": "/public/assets/collections/museum/Trieuse E12.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "inter-b",
       "name": "Interclasseuse de cartes (Inter B)",
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=60",
-      "description": "L'interclasseuse Inter B fusionne deux jeux de cartes déjà triés en un seul fichier trié. Utilisée lors des mises à jour de fichiers maîtres avec des fichiers de mouvements.",
-      "year": "~1964"
+      "image": "/public/assets/collections/museum/Interclasseuse de cartes.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "bs120",
       "name": "Tabulatrice BS120",
-      "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=60",
-      "description": "La tabulatrice BS120 lit les cartes perforées et imprime les données sous forme de tableaux. Elle peut effectuer des additions, soustractions, et totaliser des colonnes de données. C'est l'ancêtre du tableur moderne.",
-      "year": "~1958"
+      "image": "/public/assets/collections/museum/Tabulatrice BS120.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "p80",
       "name": "Perforatrice manuelle (P80)",
-      "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&q=60",
-      "description": "La perforatrice manuelle P80 est une version simplifiée permettant la perforation carte par carte de façon manuelle, sans clavier automatique. Utilisée pour les corrections et petites quantités de cartes.",
-      "year": "~1955"
+      "image": "/public/assets/collections/museum/Perforatrice P80.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "p112",
       "name": "Perforatrice P112",
-      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=60",
-      "description": "La perforatrice P112 est un modèle évolué offrant 112 colonnes par carte, permettant de stocker plus d'informations. Elle dispose d'un clavier alphanumérique complet et d'un système de tabulation automatique.",
-      "year": "~1968"
+      "image": "/public/assets/collections/museum/Perforatrice P112.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "k212",
       "name": "Perforatrice K212",
-      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=60",
-      "description": "La perforatrice K212 est le modèle haut de gamme de la gamme Bull, avec correction automatique, mémoire tampon et possibilité de reperforation. Un chef-d'œuvre de la mécanographie.",
-      "year": "~1970"
+      "image": "/public/assets/collections/museum/Perforatrice K212.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "cr500",
       "name": "CR500 (Lecteur de cartes à lecture opto-électrique)",
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=60",
-      "description": "Le CR500 utilise un système de lecture optique (cellules photoélectriques) pour lire les cartes perforées à grande vitesse, jusqu'à 500 cartes par minute. Il constitue l'interface entre les cartes et les ordinateurs de traitement.",
-      "year": "~1972"
+      "image": "/public/assets/collections/museum/CR500.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "serie300-t1",
       "name": "Série300 T1 (Imprimante à impact sur tambour)",
-      "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=60",
-      "description": "L'imprimante Série 300 T1 utilise un tambour rotatif portant tous les caractères. À chaque rotation, les marteaux frappent le ruban encré au bon moment pour imprimer le caractère souhaité. Débit : 300 lignes par minute.",
-      "year": "~1975"
+      "image": "/public/assets/collections/museum/Série300 TI.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "i51",
       "name": "Imprimante à impact sur tambour I51",
-      "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&q=60",
-      "description": "L'imprimante I51 est un modèle compact de la gamme des imprimantes à tambour de Bull. Elle offre une qualité d'impression supérieure à ses prédécesseurs grâce à un tambour à plus haute densité de caractères.",
-      "year": "~1977"
+      "image": "/public/assets/collections/museum/Imprimante I51.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "i41",
       "name": "Imprimante à impact sur tambour I41",
-      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=60",
-      "description": "L'I41 est la version économique de la famille des imprimantes à tambour, conçue pour les petites configurations. Elle imprime 400 lignes par minute et supporte plusieurs jeux de caractères.",
-      "year": "~1976"
+      "image": "/public/assets/collections/museum/Imprimante I41.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "pr71",
       "name": "Imprimante à impact sur bande PR71",
-      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=60",
-      "description": "L'imprimante PR71 utilise une bande métallique sur laquelle sont gravés les caractères. Cette technologie offre une durée de vie exceptionnelle et une vitesse d'impression de 710 lignes par minute. La bande peut être échangée pour différents jeux de caractères.",
-      "year": "~1979"
+      "image": "/public/assets/collections/museum/Imprimante PR71.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "pr46",
       "name": "Imprimante à impact sur bande PR46",
-      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=60",
-      "description": "La PR46 est la petite sœur de la PR71, avec un débit de 460 lignes par minute. Conçue pour les environnements où une impression rapide est nécessaire mais où le budget est plus contraint.",
-      "year": "~1978"
+      "image": "/public/assets/collections/museum/Imprimante PR46.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "pr54",
       "name": "Imprimante à impact sur bande PR54",
-      "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=60",
-      "description": "La PR54 occupe la position intermédiaire dans la gamme des imprimantes à bande de Bull, avec 540 lignes par minute. Elle est particulièrement appréciée pour sa fiabilité dans les environnements industriels.",
-      "year": "~1978"
+      "image": "/public/assets/collections/museum/Imprimante PR54.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "mp6090",
       "name": "Imprimante non-impact magnétographique MP6090",
-      "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&q=60",
-      "description": "La MP6090 est une imprimante révolutionnaire utilisant la technologie magnétographique. Elle n'utilise pas de marteau mais un processus magnétique puis thermique pour transférer l'encre sur le papier. Débit exceptionnel de 6090 lignes par minute.",
-      "year": "~1985"
+      "image": "/public/assets/collections/museum/Imprimante MP6090.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     }
   ]
 }

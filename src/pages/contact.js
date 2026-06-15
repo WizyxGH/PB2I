@@ -34,7 +34,7 @@ form?.addEventListener('submit', (e) => {
   }
 
   // Build mailto link
-  const mailtoLink = `mailto:contact@pb2i.fr?subject=${encodeURIComponent(objet)}&body=${encodeURIComponent(`De: ${email}\n\n${message}`)}`
+  const mailtoLink = `mailto:pb2i.belfort@gmail.com?subject=${encodeURIComponent(objet)}&body=${encodeURIComponent(`De: ${email}\n\n${message}`)}`
 
   // Show success message
   success?.classList.remove('hidden')
