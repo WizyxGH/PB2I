@@ -3,109 +3,109 @@
     {
       "id": "pelerod",
       "name": "Perforatrice de cartes (Pelerod)",
-      "image": "/public/assets/collections/museum/Pelerod.png",
+      "image": "/assets/collections/museum/Pelerod.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "vinod",
       "name": "Vérificatrice de cartes (Vinod)",
-      "image": "/public/assets/collections/museum/Vinod.png",
+      "image": "/assets/collections/museum/Vinod.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "trad80",
       "name": "Traductrice 80 colonnes (Trad 80)",
-      "image": "/public/assets/collections/museum/Trad 80.png",
+      "image": "/assets/collections/museum/Trad 80.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "prd",
       "name": "Perforatrice Reproductrice Duplicatrice (P.R.D.)",
-      "image": "/public/assets/collections/museum/Perforatrice Reproductrice Duplicatrice.png",
+      "image": "/assets/collections/museum/Perforatrice Reproductrice Duplicatrice.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "trieuse-e12",
       "name": "Trieuse E12",
-      "image": "/public/assets/collections/museum/Trieuse E12.png",
+      "image": "/assets/collections/museum/Trieuse E12.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "inter-b",
       "name": "Interclasseuse de cartes (Inter B)",
-      "image": "/public/assets/collections/museum/Interclasseuse de cartes.png",
+      "image": "/assets/collections/museum/Interclasseuse de cartes.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "bs120",
       "name": "Tabulatrice BS120",
-      "image": "/public/assets/collections/museum/Tabulatrice BS120.png",
+      "image": "/assets/collections/museum/Tabulatrice BS120.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "p80",
       "name": "Perforatrice manuelle (P80)",
-      "image": "/public/assets/collections/museum/Perforatrice P80.png",
+      "image": "/assets/collections/museum/Perforatrice P80.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "p112",
       "name": "Perforatrice P112",
-      "image": "/public/assets/collections/museum/Perforatrice P112.png",
+      "image": "/assets/collections/museum/Perforatrice P112.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "k212",
       "name": "Perforatrice K212",
-      "image": "/public/assets/collections/museum/Perforatrice K212.png",
+      "image": "/assets/collections/museum/Perforatrice K212.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "cr500",
       "name": "CR500 (Lecteur de cartes à lecture opto-électrique)",
-      "image": "/public/assets/collections/museum/CR500.png",
+      "image": "/assets/collections/museum/CR500.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "serie300-t1",
       "name": "Série300 T1 (Imprimante à impact sur tambour)",
-      "image": "/public/assets/collections/museum/Série300 TI.png",
+      "image": "/assets/collections/museum/Série300 TI.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "i51",
       "name": "Imprimante à impact sur tambour I51",
-      "image": "/public/assets/collections/museum/Imprimante I51.png",
+      "image": "/assets/collections/museum/Imprimante I51.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "i41",
       "name": "Imprimante à impact sur tambour I41",
-      "image": "/public/assets/collections/museum/Imprimante I41.png",
+      "image": "/assets/collections/museum/Imprimante I41.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "pr71",
       "name": "Imprimante à impact sur bande PR71",
-      "image": "/public/assets/collections/museum/Imprimante PR71.png",
+      "image": "/assets/collections/museum/Imprimante PR71.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "pr46",
       "name": "Imprimante à impact sur bande PR46",
-      "image": "/public/assets/collections/museum/Imprimante PR46.png",
+      "image": "/assets/collections/museum/Imprimante PR46.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "pr54",
       "name": "Imprimante à impact sur bande PR54",
-      "image": "/public/assets/collections/museum/Imprimante PR54.png",
+      "image": "/assets/collections/museum/Imprimante PR54.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "mp6090",
       "name": "Imprimante non-impact magnétographique MP6090",
-      "image": "/public/assets/collections/museum/Imprimante MP6090.png",
+      "image": "/assets/collections/museum/Imprimante MP6090.png",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     }
   ]
