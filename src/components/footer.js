@@ -23,15 +23,22 @@ export function createFooter() {
       </div>
 
       <!-- Liens -->
-      <div class="flex flex-col gap-4 col-span-1">
+      <div class="flex flex-col gap-4 col-span-2 lg:col-span-1">
         <h3 class="font-heading text-sm font-semibold text-white uppercase tracking-wider">Navigation</h3>
-        <nav class="flex flex-col gap-2">
-          <a href="${BASE_URL}notre-histoire.html" class="text-xs text-white/75 hover:text-white transition-colors">Notre histoire</a>
-          <a href="${BASE_URL}nos-missions.html"   class="text-xs text-white/75 hover:text-white transition-colors">Nos missions</a>
-          <a href="${BASE_URL}association.html"    class="text-xs text-white/75 hover:text-white transition-colors">L'association</a>
-          <a href="${BASE_URL}collections/musee.html" class="text-xs text-white/75 hover:text-white transition-colors">Nos collections</a>
-          <a href="${BASE_URL}actualites.html"     class="text-xs text-white/75 hover:text-white transition-colors">Actualités</a>
-          <a href="${BASE_URL}contact.html"        class="text-xs text-white/75 hover:text-white transition-colors">Contact</a>
+        <nav class="grid grid-cols-2 gap-x-4 gap-y-2">
+          <div class="flex flex-col gap-2">
+            <a href="${BASE_URL}notre-histoire.html" class="text-xs text-white/75 hover:text-white transition-colors">Notre histoire</a>
+            <a href="${BASE_URL}nos-missions.html"   class="text-xs text-white/75 hover:text-white transition-colors">Nos missions</a>
+            <a href="${BASE_URL}association.html"    class="text-xs text-white/75 hover:text-white transition-colors">L'association</a>
+            <a href="${BASE_URL}actualites.html"     class="text-xs text-white/75 hover:text-white transition-colors">Actualités</a>
+            <a href="${BASE_URL}contact.html"        class="text-xs text-white/75 hover:text-white transition-colors">Contact</a>
+          </div>
+          <div class="flex flex-col gap-2">
+            <a href="${BASE_URL}collections/mecanographie.html" class="text-xs text-white/75 hover:text-white transition-colors">Mécanographie</a>
+            <a href="${BASE_URL}collections/imprimantes.html" class="text-xs text-white/75 hover:text-white transition-colors">Imprimantes</a>
+            <a href="${BASE_URL}collections/magnetographie.html" class="text-xs text-white/75 hover:text-white transition-colors">Magnétographie</a>
+            <a href="${BASE_URL}collections/musee.html" class="text-xs text-white/75 hover:text-white transition-colors">Musée</a>
+          </div>
         </nav>
       </div>
 
@@ -45,7 +52,7 @@ export function createFooter() {
       </div>
 
       <!-- Social -->
-      <div class="flex flex-col gap-4 col-span-2 lg:col-span-1">
+      <div class="flex flex-col gap-4 col-span-1">
         <h3 class="font-heading text-sm font-semibold text-white uppercase tracking-wider">Suivez-nous</h3>
         <div class="flex gap-4">
           <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"

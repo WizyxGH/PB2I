@@ -1,0 +1,58 @@
+{
+  "technologies": [
+    {
+      "id": "tambour",
+      "name": "Tambour",
+      "image": "/assets/collections/magnetographie/Tambour.png",
+      "description": "Structure du tambour magnétographique\n![Animation du tambour](/assets/collections/magnetographie/anim_tambour.gif)\nLe tambour d’origine possède un diamètre de 100 mm (≈4 pouces). Son corps est creux. Obtenu initialement par assemblage de rondelles de Fe-Si (feuilletage destiné à minimiser les courants de Foucault), il est très vite remplacé par un tube d’aluminium. Sa surface supporte une couche en Fe-Ni (matériau magnétiquement doux, destiné à un bouclage efficace des flux d’écriture), puis une couche Co-Ni-P (matériau magnétiquement dur, destiné à la „mémorisation“ des dots écrits). Ces deux couches, de quelques dizaines de microns d’épaisseur, sont obtenues par électrodéposition. Une troisième couche Mo-C, très mince, réalisée par pulvérisation cathodique, assure une fonction de protection vis à vis de l’usure. La durée de vie des tambours atteint 20 à 30 millions de pages.\nUn tambour de 6 pouces de diamètre est introduit dans les produits de troisième génération. Parallèlement, l’augmentation des vitesses d’impression impose un refroidissement du tambour par circulation d’eau à l’intérieur de son corps creux."
+    },
+    {
+      "id": "ecriture",
+      "name": "Écriture",
+      "image": "/assets/collections/magnetographie/Écriture.png",
+      "description": "Enregistrement de l’image latente magnétique\n\nCliquez sur le module extrait de la barre d’écriture, pour en savoir plus sur sa structure…\n\nL’écriture de l’image latente magnétique sur le tambour est assurée par un ensemble de modules d’écriture (au nombre de 10 dans les premières machines) qui, positionnés sur une génératrice du tambour, permettent l’enregistrement de microlignes de points ou „dots“ (jusqu’à 3336 points par microligne dans les premières machines de densité 240 dpi).\nL’activation d’un pôle d’écriture crée un champ magnétique perpendiculaire à la surface du tambour qui aimante localement la couche Co-Ni-P. Après extinction de la commande d’écriture, et relaxation du champ magnétique, la zone concernée reste aimantée.\n![Photo modules](/assets/collections/magnetographie/modules.jpg)\nAvec les machines de troisième génération, un module haute définition 480 dpi est introduit en 1997. Contrairement au module d’origine, essentiellement basé sur des procédés micromécaniques, le nouveau module fait largement usage des procédés microélectroniques sur silicium. La barre d’écriture est alors composée de 18 modules, alignés en deux nappes alternées, offrant une microligne de 8640 points.\n![Barre](/assets/collections/magnetographie/barre.gif)\nUne version très haute définition 600 dpi est extrapolée des mêmes technologies et équipe les machines de quatrième génération (années 2000+)."
+    },
+    {
+      "id": "module",
+      "name": "Module",
+      "image": "/assets/collections/magnetographie/Module.png",
+      "description": "Module de têtes magnétographiques parallèles\n\nCliquez au centre du schéma pour en savoir plus sur le fonctionnement de la tête ainsi que celui des têtes nouvelles générations 480 et 600 dpi. \n\nLe module G1 (génération 1) comporte 336  têtes discrètes, réparties en 6 groupes (sous-modules), les têtes de chaque groupe étant adressables  à l’intérieur d’une matrice à diodes de 7 lignes de sélection séquentielle et 8 lignes de data.\n\n![Photo](/assets/collections/magnetographie/barre.gif)\n\nLe surmoulage du module incorpore, en un seul bloc, les 336 têtes, les 336 diodes, les connexions et les patins de protection situés de chaque côté de la ligne des pôles d’écriture.\n\nLa barre d’écriture comporte 10 modules côte-à-côte, soit un total de 3336 têtes au pas de 240 au pouce."
+    },
+    {
+      "id": "tete",
+      "name": "Tête",
+      "image": "/assets/collections/magnetographie/Tête.png",
+      "description": "Ecriture des dots de l’image magnétique latente\n\nDans les premiers produits commerciaux (240 dpi), la tête individuelle se compose d’une piste Fe-Ni de haute perméabilité magnétique (épaisseur 50 µm), possédant un pôle d’écriture étroit, un pôle de retour fortement allongé et un bobinage (90 tours).\nL’activation du bobinage (≈ 100 mA) crée un flux magnétique canalisé par la piste qui, issu du pôle d’écriture, traverse verticalement la couche Co-Ni-P du tambour, puis la sous-couche Fe-Ni avant de se refermer par le pôle de retour.\nLa loi de conservation du flux magnétique fait que l’induction au droit du pôle d’écriture est fortement supérieure à celle qui règne sous le pôle de retour.\nAprès arrêt du courant et relaxation des matériaux magnétiques, le dot enregistré conserve une aimantation, alors que celle au niveau du pôle de retour est pratiquement négligeable.\n\nTêtes Haute Définition\n\nLe principe de fonctionnement de la tête d’écriture du module HD 480 dpi (présent sur les machines de troisième génération) n’est pas fondamentalement différent : l’enregistrement du tambour reste du type perpendiculaire obtenu par un pôle d’écriture vertical. La bobine plate offre un meilleur rendement et les pôles de retour du flux sont avantageusement remplacés par un plan de retour commun à tous les pôles d’un même module.\n\n![Tête 480 dpi](/assets/collections/magnetographie/Tete_480_dpi.png)\n\nLa différence essentielle se situe au niveau des techniques de fabrication : procédés micro-mécaniques discrets remplacés par les procédés collectifs de la micro-électronique sur silicium. Le module comprend une puce silicium de 480 pôles d’écriture et 480 diodes co-intégrés. Un câble plat raccorde la puce à son connecteur.\n\nLe développement de ces nouvelles têtes d’écriture a été démarré en 1991 et  la définition de 480 dpi a été portée à 600 dpi en 2000.\nPour en savoir plus,  vous pouvez consulter la présentation de B. Cherbuy (qui a initié et suivi ce projet) : Congrès IS&T de New Orleans  Octobre 1994"
+    },
+    {
+      "id": "encrage",
+      "name": "Encrage",
+      "image": "/assets/collections/magnetographie/Encrage.png",
+      "description": "Développement de l’image latente par le toner\n\nL’encre utilisée est du type solide pulvérulent (qu’il est d’usage d’appeler „toner“). Les particules de toner, préalablement aimantées, sont appliquées sur la surface du tambour à l’aide d’un convoyeur magnétique constitué d’un cylindre en rotation continue qui „monte“ l’encre au contact de l’image. Les „dots“ magnétiques constituant l’image latente retiennent les particules d’encre, tandis que les zones non-imagées restent quasiment vierges.\nEn statique ou à très faible vitesse, le toner a toutefois tendance à produire un bruit de fond en adhérant au tambour même en l’absence d’image. Ce bruit de fond diminue avec les vitesses croissantes, du fait des chocs de plus en plus énergiques qui se succèdent entre particules libres et particules captives dans la zone d’encrage.\n![Dot encré](/assets/collections/magnetographie/Dot_encre.png)\nLes dots quant à eux, ont tendance à se couvrir d’une trop grande quantité d’encre. Une retouche magnétique réglable, complétée d’une aspiration par lame d’air, permet de retirer l’excès de toner.\nHistoriquement, les premières machines utilisaient un „lit“ d’encrage, quasi statique mais à forte densité de particules, créé par une lame-barrage placée en travers du flot de particules. Les machines de seconde génération ont donné la préférence à un encrage par vague fluidisée engendrée par une lame-tremplin."
+    },
+    {
+      "id": "transfert",
+      "name": "Transfert",
+      "image": "/assets/collections/magnetographie/Transfert.png",
+      "description": "Transfert électrostatique du toner sur le papier\nPrincipe du transfert\nDans les premières machines, le transfert de l’image encrée sur le papier ne mettait en œuvre que la pression exercée par un rouleau situé derrière le papier. Cette solution purement mécanique offrait l’avantage d’un synchronisme parfait entre tambour et bande papier, mais souffrait d’un taux de transfert relativement faible.\nTrès vite une assistance électrostatique s’est avérée nécessaire. La polarisation de l’âme métallique du rouleau de transfert, associée à la mise à la masse du tambour, engendre un champ électrique dans la zone de transfert. Les particules de toner, de type résistif et préchargées en amont par un corotron à tension continue, interagissent avec ce champ électrique qui aide à les décoller du tambour.\nFinalement, un second corotron, cette fois à tension alternative, dissipe les charges électrostatiques du papier dans la zone post-transfert."
+    },
+    {
+      "id": "fixation",
+      "name": "Fixation",
+      "image": "/assets/collections/magnetographie/Fixation.png",
+      "description": "Fixation sur le papier du toner thermofusible\n\nLa fixation définitive de l’image encrée, puis transférée sur le papier, consiste à fondre le toner thermofusible afin qu’il pénètre dans les fibres du papier et s’y ancre solidement en se refroidissant.\nPhysiquement, la résine des particules passe par les phases suivantes :\n\n- état solide (température ambiante), particules dures, de formes irrégulières\n- état viscoélastique (température > température de transition vitreuse Tg), tendance à la sphéroïdisation\n- état fluide visqueux (température > température de fusion Tf), coalescence des particules pour former une masse\n- la masse fluide coule et mouille les irrégularités du papier\n- refroidissement (température ambiante)\n\nLes premières machines utilisent une fixation par four radiant continu : la bande papier passe sous un ensemble de lampes halogènes et réflecteur. Le papier lui-même est pré-chauffé par contact avec une sole chauffante. Les machines de troisième génération voient l’introduction d’une fixation par flash qui présente l’avantage de ne chauffer que le toner et très peu le papier."
+    },
+    {
+      "id": "nettoyage",
+      "name": "Nettoyage",
+      "image": "/assets/collections/magnetographie/Nettoyage.png",
+      "description": "Nettoyage des résidus de toner non-transférés\n\nLe nettoyage du tambour repose essentiellement sur une lame métallique de raclage. Les résidus de toner ainsi détachés sont évacués par aspiration.\nUn feutre situé derrière la lame termine l’opération de nettoyage."
+    },
+    {
+      "id": "effacement",
+      "name": "Effacement",
+      "image": "/assets/collections/magnetographie/Effacement.png",
+      "description": "Ré-initialisation par tête d’effacement magnétique AC\n\nAprès transfert du toner et nettoyage du tambour, il reste à effacer l’image magnétique de façon à pouvoir démarrer le cycle d’impression suivant.\nCette opération s’exécute classiquement à l’aide d’une tête magnétique, du type dit „à fuite“. Le champ magnétique créé par un courant alternatif crée spatialement un champ alternatif d’amplitude décroissante. Les dots de l’image magnétique, s’éloignant de la tête d’effacement du fait de la rotation du tambour, sont exposés à ce champ. Leur état magnétique décrit des cycles d’hystérésis mineurs tendant rapidement vers zéro."
+    }
+  ]
+}

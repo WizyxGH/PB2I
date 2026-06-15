@@ -79,7 +79,7 @@
 
     <!-- ─── Section 3: Notre Histoire ───────────────────────── -->
     <section id="histoire" class="bg-white px-4 lg:px-36 py-12 lg:py-16 flex flex-col gap-8">
-      <h2 class="font-heading font-extrabold text-2xl lg:text-3xl text-gray-900 uppercase" data-i18n="history.title">
+      <h2 class="font-heading font-bold text-2xl lg:text-3xl text-gray-900 uppercase" data-i18n="history.title">
         Notre Histoire
       </h2>
       <div class="text-sm leading-loose max-w-5xl flex flex-col gap-4" style="color:var(--color-text-muted)" data-i18n="history.body">
@@ -99,20 +99,20 @@
     <section id="qui-sommes-nous" class="bg-white px-4 lg:px-36 py-12 lg:py-16 flex flex-col lg:flex-row gap-12 lg:gap-16 justify-between items-start">
       <!-- Left: Who are we— description -->
       <div class="flex-[1.2] flex flex-col gap-6 items-start w-full">
-        <h2 class="font-heading font-extrabold text-2xl lg:text-3xl text-gray-900 uppercase" data-i18n="whoarewe.title_section">
-          Qui sommes-nous —
+        <h2 class="font-heading font-bold text-2xl lg:text-3xl text-gray-900 uppercase" data-i18n="whoarewe.title_section">
+          Qui sommes-nous ?
         </h2>
         <div class="text-sm leading-loose flex flex-col gap-4" style="color:var(--color-text-muted)" data-i18n="whoarewe.body">
           <p>Notre groupe actif se compose de bénévoles assidus et de quelques sympathisants, au sein du Patrimoine Belfortain de l'Industrie Informatique. L'essentiel de notre activité porte sur la poursuite de travaux de maintien en condition des machines restaurées, le développement de démonstrations et la présentation de notre patrimoine industriel.</p>
           <p>Nous disposons d'un atelier mécanographique à cartes perforées des années 1950, installé dans nos locaux en exposition permanente, animé par plusieurs techniciens, ainsi que d'une importante documentation d'entreprise archivée.</p>
         </div>
-        <a href="association.html" class="btn-beige" data-i18n="whoarewe.cta">L'association</a>
+        <a href="association.html" class="btn-beige" data-i18n="whoarewe.cta">Découvrir l'association</a>
       </div>
       
       <!-- Right: Latest News (dark red container) -->
       <aside class="flex-1 w-full lg:max-w-[430px] bg-[#702424] rounded-2xl p-6 shadow-lg flex flex-col gap-6 self-stretch">
         <h2 class="font-heading font-bold text-2xl text-white" data-i18n="news.title">Dernières actualités</h2>
-        <div id="news-list" class="flex flex-col gap-3">
+        <div id="news-list" class="flex flex-col">
           <!-- Dynamically populated by JS (Figma news cards) -->
           <div class="skeleton h-20 rounded-lg"></div>
           <div class="skeleton h-20 rounded-lg"></div>
@@ -144,11 +144,11 @@
       </h2>
       
       <!-- Carousel Wrapper -->
-      <div id="collections-carousel" class="relative w-full overflow-hidden">
+      <div id="collections-carousel" class="relative w-full overflow-hidden py-2">
         <div id="carousel-track" class="flex gap-6 transition-transform duration-500 ease-out">
           
           <!-- Card: Mécanographie -->
-          <div class="flex-[0_0_100%] sm:flex-[0_0_calc(50%-12px)] lg:flex-[0_0_calc(33.333%-16px)] min-w-0 card-image-wrap">
+          <div class="flex-[0_0_85%] sm:flex-[0_0_calc(45%-12px)] lg:flex-[0_0_calc(28%-16px)] min-w-0 card-image-wrap">
             <a href="collections/mecanographie.html" class="card-carousel-item bg-beige block">
               <div class="card-polaroid-img-wrap">
                 <img src="/assets/images/mecanographie.jpg" alt="Mécanographie" class="card-polaroid-img" onerror="this.onerror=null;this.src=(document.querySelector('meta[name=base-url]')—.content||'/')+'assets/figma/hero-2.png'">
@@ -158,7 +158,7 @@
           </div>
           
           <!-- Card: Imprimantes -->
-          <div class="flex-[0_0_100%] sm:flex-[0_0_calc(50%-12px)] lg:flex-[0_0_calc(33.333%-16px)] min-w-0 card-image-wrap">
+          <div class="flex-[0_0_85%] sm:flex-[0_0_calc(45%-12px)] lg:flex-[0_0_calc(28%-16px)] min-w-0 card-image-wrap">
             <a href="collections/imprimantes.html" class="card-carousel-item bg-beige block">
               <div class="card-polaroid-img-wrap">
                 <img src="/assets/images/imprimantes.jpg" alt="Imprimantes" class="card-polaroid-img" onerror="this.onerror=null;this.src=(document.querySelector('meta[name=base-url]')—.content||'/')+'assets/figma/hero-2.png'">
@@ -168,7 +168,7 @@
           </div>
 
           <!-- Card: Magnétographie -->
-          <div class="flex-[0_0_100%] sm:flex-[0_0_calc(50%-12px)] lg:flex-[0_0_calc(33.333%-16px)] min-w-0 card-image-wrap">
+          <div class="flex-[0_0_85%] sm:flex-[0_0_calc(45%-12px)] lg:flex-[0_0_calc(28%-16px)] min-w-0 card-image-wrap">
             <a href="collections/magnetographie.html" class="card-carousel-item bg-beige block">
               <div class="card-polaroid-img-wrap">
                 <img src="/assets/images/magnetographie.jpg" alt="Magnétographie" class="card-polaroid-img" onerror="this.onerror=null;this.src=(document.querySelector('meta[name=base-url]')—.content||'/')+'assets/figma/hero-2.png'">
@@ -178,12 +178,12 @@
           </div>
 
           <!-- Card: Musée (Dark red special card from Figma) -->
-          <div class="flex-[0_0_100%] sm:flex-[0_0_calc(50%-12px)] lg:flex-[0_0_calc(33.333%-16px)] min-w-0 card-image-wrap">
+          <div class="flex-[0_0_85%] sm:flex-[0_0_calc(45%-12px)] lg:flex-[0_0_calc(28%-16px)] min-w-0 card-image-wrap">
             <a href="collections/musee.html" class="card-carousel-item bg-beige block">
               <div class="card-polaroid-img-wrap">
                 <img src="/assets/images/musee.jpg" alt="Musée" class="card-polaroid-img" onerror="this.onerror=null;this.src=(document.querySelector('meta[name=base-url]')—.content||'/')+'assets/figma/hero-2.png'">
               </div>
-              <p class="card-polaroid-caption font-semibold mt-2 text-center">Le Musée PB2I</p>
+              <p class="card-polaroid-caption font-semibold mt-2 text-center">Musée PB2I</p>
             </a>
           </div>
           
@@ -197,16 +197,14 @@
 
       </div>
 
-
-      <a href="collections/musee.html" class="btn-beige mt-4" data-i18n="collections.cta">Voir les collections</a>
       <div class="line-separator mt-8"></div>
     </section>
 
     <!-- ─── Section 7: Comment s'y rendre (Map) ────────────── -->
     <section id="map-section" class="bg-white px-4 lg:px-36 py-12 lg:py-16 flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
       <div class="flex-1 w-full flex flex-col gap-6">
-        <h2 class="font-heading font-extrabold text-2xl lg:text-3xl text-gray-900 uppercase" data-i18n="map.title">
-          Comment s’y rendre —
+        <h2 class="font-heading font-bold text-2xl lg:text-3xl text-gray-900 uppercase" data-i18n="map.title">
+          Comment s’y rendre
         </h2>
         <div class="text-sm leading-loose flex flex-col gap-6" style="color:var(--color-text-muted)">
           <div>
@@ -236,7 +234,7 @@
       <div class="flex-1 w-full">
         <div class="rounded-2xl overflow-hidden shadow-md" style="height:322px">
           <iframe
-            src="https://www.google.com/maps/embed—pb=!1m18!1m12!1m3!1d2692.6!2d6.8517!3d47.6327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDM3JzU3LjciTiA2wrA1MScwNi4xIkU!5e0!3m2!1sfr!2sfr!4v1"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2692.6!2d6.8517!3d47.6327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDM3JzU3LjciTiA2wrA1MScwNi4xIkU!5e0!3m2!1sfr!2sfr!4v1"
             width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
             title="Localisation PB2I — Techn'hom 2, Belfort"></iframe>

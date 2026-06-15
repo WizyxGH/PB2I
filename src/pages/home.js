@@ -10,7 +10,7 @@ window.PB2I_PAGE = 'home'
 
 // Mount navbar + footer
 await initI18n()
-  mountComponents('histoire')
+  mountComponents('')
   translateDOM()
 
 // ── Carousel ────────────────────────────────────────────────

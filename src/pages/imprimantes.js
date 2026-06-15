@@ -1,7 +1,11 @@
 import { mountComponents, initFadeIn } from '/src/components.js';
+import { getActiveLang } from '/src/utils/lang.js';
+import { initI18n, translateDOM } from '../utils/i18n.js';
 
 window.PB2I_PAGE = 'home';
+await initI18n();
 mountComponents('collections');
+translateDOM();
 initFadeIn('[data-fade]');
 
 const chronoData = [
@@ -151,12 +155,10 @@ const chronoData = [
   }
 ];
 
-document.addEventListener('DOMContentLoaded', () => {
-  const grid = document.getElementById('chrono-grid');
-  if (!grid) return;
-
+const chronoGrid = document.getElementById('chrono-grid');
+if (chronoGrid) {
   function renderGrid(activeId) {
-    grid.innerHTML = chronoData.map(item => {
+    chronoGrid.innerHTML = chronoData.map(item => {
       const isActive = item.id === activeId;
       const bgClass = isActive ? 'bg-[#702424]' : 'bg-[#f8eedc] hover:bg-[#f2e2ca]';
       const textClass = isActive ? 'text-white' : 'text-[#702424]';
@@ -200,4 +202,4 @@ document.addEventListener('DOMContentLoaded', () => {
   // Init
   renderGrid('annees70');
   updateContent('annees70');
-});
+}

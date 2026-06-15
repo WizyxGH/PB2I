@@ -28,6 +28,21 @@ async function loadArticles() {
       return
     }
 
+    const formatArticleDate = (isoStr) => {
+      try {
+        const parts = isoStr.split('-')
+        let d = new Date(isoStr)
+        if (parts.length === 3) {
+          d = new Date(parts[0], parseInt(parts[1]) - 1, parts[2])
+        }
+        if (isNaN(d.valueOf())) return isoStr
+        return new Intl.DateTimeFormat(lang || 'fr', { day: 'numeric', month: 'long', year: 'numeric' }).format(d)
+      } catch (e) { 
+        console.error('Date format error:', e)
+        return isoStr 
+      }
+    }
+
     grid.innerHTML = articles.map((a, i) => `
       <a href="${baseUrl}article.html?id=${a.id}" class="card-article no-underline" data-fade style="animation-delay:${i*60}ms">
         <div class="card-article-img-wrap">
@@ -48,7 +63,7 @@ async function loadArticles() {
                 style="background:var(--color-primary)">${a.author.split(' ').map(n=>n[0]).join('').slice(0,2)}</div>
               <div>
                 <p class="text-xs font-semibold" style="color:var(--color-primary)">${a.author}</p>
-                <p class="text-xs" style="color:rgba(37,37,37,0.5)">${a.date}</p>
+                <p class="text-xs" style="color:rgba(37,37,37,0.5)">${formatArticleDate(a.date)}</p>
               </div>
             </div>
             <span class="text-xs font-semibold px-3 py-1.5 rounded-lg text-white" style="background:var(--color-primary)">

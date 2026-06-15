@@ -64,9 +64,6 @@ async function loadArticle() {
         class="w-full rounded-2xl my-10 shadow-md object-cover max-h-[480px]"
         onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=80'">
 
-      <!-- Primary divider -->
-      <div class="my-8 h-0.5 rounded-full" style="background:linear-gradient(to right,var(--color-primary),transparent)"></div>
-
       <!-- Rest of content -->
       ${article.content.slice(2).map(p => `<p class="text-base leading-loose mb-6" style="color:var(--color-text-muted)">${p}</p>`).join('')}
 

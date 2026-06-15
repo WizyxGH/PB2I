@@ -124,15 +124,15 @@
     </div>
 
     <!-- Carte téléchargement livre -->
-    <div class="bg-hero-gradient rounded-2xl p-6 flex flex-col sm:flex-row gap-6 items-start shadow-md">
-      <div class="flex-shrink-0 w-24 sm:w-28 rounded overflow-hidden shadow">
+    <div class="bg-hero-gradient rounded-2xl p-6 flex flex-col sm:flex-row gap-6 sm:items-stretch">
+      <div class="flex-shrink-0 w-full sm:w-36 rounded overflow-hidden flex justify-center">
         <img
-          src="/assets/figma/history-1.png"
+          src="/assets/figma/Couverture La Sage de Bull Belfort.jpg"
           alt="Couverture du livre La Saga de Bull à Belfort"
-          class="w-full object-cover"
+          class="w-full h-48 sm:h-full object-contain"
           onerror="this.onerror=null;this.style.display='none'">
       </div>
-      <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-4 py-2">
         <div>
           <p class="text-xs font-semibold uppercase tracking-widest mb-1" style="color:var(--color-primary)">Livre</p>
           <h3 class="font-heading font-bold text-xl text-gray-900 uppercase">La saga de Bull à Belfort</h3>
@@ -140,7 +140,7 @@
             Découvrez l'histoire complète de la présence de Bull à Belfort, des hommes et des machines qui ont façonné le patrimoine industriel informatique de notre région.
           </p>
         </div>
-        <a href="#" class="btn-primary self-start" id="btn-download-saga">
+        <a href="/assets/pdf/La%20saga%20de%20Bull%20%C3%A0%20Belfort.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary self-start mt-auto" id="btn-download-saga">
           Ouvrir le document PDF
         </a>
       </div>
