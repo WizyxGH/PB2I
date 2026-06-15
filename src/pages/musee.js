@@ -8,6 +8,8 @@ import { getActiveLang } from '/src/utils/lang.js'
 window.PB2I_PAGE = 'home'
 mountComponents('collections')
 
+const baseUrl = import.meta.env.BASE_URL || '/'
+
 // ── Refs ───────────────────────────────────────────────────────
 const grid    = document.getElementById('machines-grid')
 const overlay = document.getElementById('machine-overlay')
@@ -22,7 +24,7 @@ function openMachineModal(machine) {
   modalTitle.textContent = machine.name
   modalName.textContent  = machine.name
   modalDesc.textContent  = machine.description
-  modalImg.src           = machine.image
+  modalImg.src           = machine.image.startsWith('/') ? baseUrl + machine.image.slice(1) : baseUrl + machine.image
   modalImg.alt           = machine.name
 
   overlay.classList.remove('opacity-0', 'pointer-events-none')
@@ -45,7 +47,6 @@ async function loadMachines() {
   if (!grid) return
   try {
     const lang = getActiveLang()
-    const baseUrl = import.meta.env.BASE_URL || '/'
     const res  = await fetch(`${baseUrl}data/${lang}/collections/musee.json`)
     const data = await res.json()
     const machines = data.machines || []
@@ -57,7 +58,7 @@ async function loadMachines() {
         data-id="${m.id}" data-fade
         style="animation-delay:${i * 40}ms"
         aria-label="En savoir plus sur ${m.name}">
-        <img src="${m.image}" alt="${m.name}"
+        <img src="${baseUrl}${m.image.startsWith('/') ? m.image.slice(1) : m.image}" alt="${m.name}"
           class="w-28 h-24 object-contain mx-auto"
           onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?w=200&q=50'">
         <p class="font-heading font-bold text-sm leading-snug text-center transition-colors duration-200" style="color:var(--color-text-body)">
