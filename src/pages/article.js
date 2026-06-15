@@ -2,6 +2,7 @@
  * PB2I — Article detail JS
  */
 import { mountComponents, initFadeIn } from '../components.js'
+import { getActiveLang } from '../utils/lang.js'
 
 window.PB2I_PAGE = 'articles'
 mountComponents('actualites')
@@ -14,7 +15,7 @@ async function loadArticle() {
   const body   = document.getElementById('article-body')
 
   try {
-    const lang = localStorage.getItem('pb2i_lang') || 'fr'
+    const lang = getActiveLang()
     const baseUrl = import.meta.env.BASE_URL || '/'
     const res  = await fetch(`${baseUrl}data/${lang}/articles.json`)
     const data = await res.json()

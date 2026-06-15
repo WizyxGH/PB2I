@@ -3,6 +3,7 @@
  * Loads machines from JSON, renders grid, handles modal
  */
 import { mountComponents, initFadeIn } from '/src/components.js'
+import { getActiveLang } from '/src/utils/lang.js'
 
 window.PB2I_PAGE = 'home'
 mountComponents('collections')
@@ -43,7 +44,7 @@ document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal
 async function loadMachines() {
   if (!grid) return
   try {
-    const lang = localStorage.getItem('pb2i_lang') || 'fr'
+    const lang = getActiveLang()
     const baseUrl = import.meta.env.BASE_URL || '/'
     const res  = await fetch(`${baseUrl}data/${lang}/collections/musee.json`)
     const data = await res.json()

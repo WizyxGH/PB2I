@@ -3,6 +3,7 @@
  */
 
 import { mountComponents, initFadeIn } from '../components.js'
+import { getActiveLang } from '../utils/lang.js'
 import '../../public/data/fr/articles.json' // ensure bundled
 
 window.PB2I_PAGE = 'home'
@@ -90,7 +91,7 @@ async function loadNews() {
   if (!newsList) return
 
   try {
-    const lang = localStorage.getItem('pb2i_lang') || 'fr'
+    const lang = getActiveLang()
     const baseUrl = import.meta.env.BASE_URL || '/'
     const res  = await fetch(`${baseUrl}data/${lang}/articles.json`)
     const data = await res.json()
