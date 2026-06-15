@@ -6,6 +6,7 @@
   <meta name="description" content="Patrimoine Belfortain de l'Industrie Informatique — Association dédiée à la préservation du patrimoine industriel informatique de Belfort." />
   <title>PB2I - Patrimoine Belfortain de l'Industrie Informatique</title>
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <meta name="base-url" content="/PB2I/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <script type="module" src="/src/pages/home.js"></script>
@@ -142,7 +143,7 @@
           <div class="flex-[0_0_100%] sm:flex-[0_0_calc(50%-12px)] lg:flex-[0_0_calc(33.333%-16px)] min-w-0 card-image-wrap">
             <a href="collections/mecanographie.html" class="card-carousel-item bg-beige block">
               <div class="card-polaroid-img-wrap">
-                <img src="/assets/images/mecanographie.jpg" alt="Mécanographie" class="card-polaroid-img" onerror="this.src='/assets/figma/hero-2.png'">
+                <img src="/assets/images/mecanographie.jpg" alt="Mécanographie" class="card-polaroid-img" onerror="this.onerror=null;this.src=(document.querySelector('meta[name=base-url]')?.content||'/')+'assets/figma/hero-2.png'">
               </div>
               <p class="card-polaroid-caption font-semibold mt-2">Mécanographie</p>
             </a>
@@ -152,7 +153,7 @@
           <div class="flex-[0_0_100%] sm:flex-[0_0_calc(50%-12px)] lg:flex-[0_0_calc(33.333%-16px)] min-w-0 card-image-wrap">
             <a href="collections/imprimantes.html" class="card-carousel-item bg-beige block">
               <div class="card-polaroid-img-wrap">
-                <img src="/assets/images/imprimantes.jpg" alt="Imprimantes" class="card-polaroid-img" onerror="this.src='/assets/figma/hero-2.png'">
+                <img src="/assets/images/imprimantes.jpg" alt="Imprimantes" class="card-polaroid-img" onerror="this.onerror=null;this.src=(document.querySelector('meta[name=base-url]')?.content||'/')+'assets/figma/hero-2.png'">
               </div>
               <p class="card-polaroid-caption font-semibold mt-2">Imprimantes</p>
             </a>
@@ -162,7 +163,7 @@
           <div class="flex-[0_0_100%] sm:flex-[0_0_calc(50%-12px)] lg:flex-[0_0_calc(33.333%-16px)] min-w-0 card-image-wrap">
             <a href="collections/magnetographie.html" class="card-carousel-item bg-beige block">
               <div class="card-polaroid-img-wrap">
-                <img src="/assets/images/magnetographie.jpg" alt="Magnétographie" class="card-polaroid-img" onerror="this.src='/assets/figma/hero-2.png'">
+                <img src="/assets/images/magnetographie.jpg" alt="Magnétographie" class="card-polaroid-img" onerror="this.onerror=null;this.src=(document.querySelector('meta[name=base-url]')?.content||'/')+'assets/figma/hero-2.png'">
               </div>
               <p class="card-polaroid-caption font-semibold mt-2">Magnétographie</p>
             </a>
@@ -172,7 +173,7 @@
           <div class="flex-[0_0_100%] sm:flex-[0_0_calc(50%-12px)] lg:flex-[0_0_calc(33.333%-16px)] min-w-0 card-image-wrap">
             <a href="collections/musee.html" class="card-carousel-item bg-red block">
               <div class="card-polaroid-img-wrap">
-                <img src="/assets/images/musee.jpg" alt="Musée" class="card-polaroid-img" onerror="this.src='/assets/figma/hero-2.png'">
+                <img src="/assets/images/musee.jpg" alt="Musée" class="card-polaroid-img" onerror="this.onerror=null;this.src=(document.querySelector('meta[name=base-url]')?.content||'/')+'assets/figma/hero-2.png'">
               </div>
               <p class="card-polaroid-caption font-semibold mt-2 text-white">Le Musée PB2I</p>
             </a>

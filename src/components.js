@@ -7,7 +7,7 @@ import './style.css'
 
 // ── Assets ──────────────────────────────────────────────────
 const BASE_URL = import.meta.env.BASE_URL || '/'
-const logoUrl = `${BASE_URL}assets/logo.png`
+const logoUrl = `${BASE_URL}favicon.svg`
 
 // ── Navbar HTML ─────────────────────────────────────────────
 function createNavbar(activePage = '') {
