@@ -3,9 +3,12 @@
  */
 import { mountComponents, initFadeIn } from '../components.js'
 import { getActiveLang } from '../utils/lang.js'
+import { initI18n, translateDOM } from '../utils/i18n.js'
 
 window.PB2I_PAGE = 'articles'
-mountComponents('actualites')
+await initI18n()
+  mountComponents('actualites')
+  translateDOM()
 
 async function loadArticle() {
   const params    = new URLSearchParams(window.location.search)
@@ -23,6 +26,22 @@ async function loadArticle() {
 
     const article = all.find(a => a.id === articleId) || all[0]
     if (!article) throw new Error('Not found')
+
+    const formatArticleDate = (isoStr) => {
+      try {
+        // Fix for Safari and others: convert to YYYY/MM/DD or just parse it explicitly
+        const parts = isoStr.split('-')
+        let d = new Date(isoStr)
+        if (parts.length === 3) {
+          d = new Date(parts[0], parseInt(parts[1]) - 1, parts[2])
+        }
+        if (isNaN(d.valueOf())) return isoStr
+        return new Intl.DateTimeFormat(lang || 'fr', { day: 'numeric', month: 'long', year: 'numeric' }).format(d)
+      } catch (e) { 
+        console.error('Date format error:', e)
+        return isoStr 
+      }
+    }
 
     // Update page title
     document.title = `${article.title} — PB2I`
@@ -57,7 +76,7 @@ async function loadArticle() {
           style="background:var(--color-primary)">${article.author.split(' ').map(n=>n[0]).join('').slice(0,2)}</div>
         <div>
           <p class="text-sm font-semibold" style="color:var(--color-primary)">${article.author}</p>
-          <p class="text-xs" style="color:rgba(37,37,37,0.5)">${article.date}</p>
+          <p class="text-xs" style="color:rgba(37,37,37,0.5)">${formatArticleDate(article.date)}</p>
         </div>
       </div>
     `
@@ -75,8 +94,8 @@ async function loadArticle() {
           </div>
           <div class="p-4 flex flex-col gap-2 flex-1">
             <p class="font-heading font-bold text-sm leading-snug" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:var(--color-text-body)">${a.title}</p>
-            <p class="text-xs" style="color:rgba(37,37,37,0.5)">${a.date}</p>
-            <span class="mt-auto text-xs font-semibold" style="color:var(--color-primary)">Lire l'article →</span>
+            <p class="text-xs" style="color:rgba(37,37,37,0.5)">${formatArticleDate(a.date)}</p>
+            <span class="mt-auto text-xs font-semibold" style="color:var(--color-primary)">Lire l'article</span>
           </div>
         </a>
       `).join('')

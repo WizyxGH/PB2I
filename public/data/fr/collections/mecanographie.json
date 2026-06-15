@@ -1,0 +1,20 @@
+[
+  {
+    "id": "carte",
+    "name": "La carte perforée",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Punched_card_abstraction.png/640px-Punched_card_abstraction.png",
+    "description": "La carte perforée est le support de base de l'information mécanographique. Chaque colonne représente un caractère, codé par la présence ou l'absence de trous. À remplir avec des détails."
+  },
+  {
+    "id": "fichier",
+    "name": "Le fichier à cartes perforées",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Punch_card_reader_IBM.jpg/640px-Punch_card_reader_IBM.jpg",
+    "description": "L'atelier mécanographique organise d'immenses fichiers composés de milliers de cartes perforées, manipulées et lues par les machines pour effectuer les traitements. À compléter..."
+  },
+  {
+    "id": "trieuse",
+    "name": "La trieuse de cartes",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/IBM_card_sorter.jpg/640px-IBM_card_sorter.jpg",
+    "description": "La trieuse permet de reclasser physiquement le paquet de cartes perforées selon les trous d'une colonne donnée, facilitant les traitements par lots. À compléter..."
+  }
+]

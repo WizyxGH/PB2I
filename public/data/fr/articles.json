@@ -1,84 +1,75 @@
 {
   "articles": [
     {
-      "id": "bull-belfort-histoire",
-      "title": "L'histoire de BULL à Belfort : 30 ans de présence industrielle",
-      "excerpt": "Porter le témoignage de 30 années de présence de BULL à Belfort, la vie de l'entreprise, des événements, des femmes, des hommes (effectifs de 1500 à 2500 personnes), des produits et des technologies.",
-      "date": "15 mars 2025",
-      "author": "Yves MOUGEY",
-      "authorAvatar": "/assets/images/avatar-default.jpg",
-      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Belfort%2C_Territoire_de_Belfort%2C_France_-_panoramio_%28102%29.jpg/640px-Belfort%2C_Territoire_de_Belfort%2C_France_-_panoramio_%28102%29.jpg",
-      "content": [
-        "Porter le témoignage de 30 années de présence de BULL à Belfort, la vie de l'entreprise, des événements, des femmes, des hommes (effectifs de 1500 à 2500 personnes), des produits et des technologies.",
-        "Affirmer notre existence dans le tissu associatif local, plus spécialement auprès des équipes sensibilisées par le patrimoine en général, industriel en particulier, puisque notre région est riche en ce domaine."
-      ],
-      "images": [],
-      "tags": ["Histoire", "BULL", "Belfort"]
-    },
-    {
-      "id": "atelier-mecanographique-150",
-      "title": "Notre atelier Mécanographique 150 : une restauration exemplaire",
-      "excerpt": "Développer et peaufiner nos démonstrations « Atelier Mécanographique 150 » et matériels développés et fabriqués à Bull Belfort.",
-      "date": "28 janvier 2025",
-      "author": "Gérard GRAFF",
-      "authorAvatar": "/assets/images/avatar-default.jpg",
-      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Punch_card_reader_IBM.jpg/640px-Punch_card_reader_IBM.jpg",
-      "content": [
-        "Développer et peaufiner nos démonstrations « Atelier Mécanographique 150 » et matériels développés et fabriqués à Bull Belfort.",
-        "Organiser des visites et démonstrations dynamiques sur les matériels installés en exposition permanente dans nos locaux.",
-        "Constituer une vitrine de notre histoire Industrielle ouverte au public."
-      ],
-      "images": [],
-      "tags": ["Mécanographie", "Restauration", "Démonstration"]
-    },
-    {
-      "id": "vitrine-histoire-industrielle",
-      "title": "Ouvrir notre vitrine de l'histoire industrielle au public",
-      "excerpt": "Constituer une vitrine de notre histoire Industrielle ouverte au public, faire vivre notre site Internet et maintenir nos machines en condition de fonctionnement.",
-      "date": "10 décembre 2024",
-      "author": "Richard PELLEGRINI",
-      "authorAvatar": "/assets/images/avatar-default.jpg",
-      "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=70",
-      "content": [
-        "Constituer une vitrine de notre histoire Industrielle ouverte au public.",
-        "Faire vivre notre site Internet.",
-        "Continuer la maintenance d'anciennes machines à cartes perforées, d'imprimantes et d'équipements de saisie de données.",
-        "Maintenir nos machines en conditions optimales de fonctionnement pour les démonstrations publiques."
-      ],
-      "images": [],
-      "tags": ["Musée", "Public", "Maintenance"]
-    },
-    {
-      "id": "journees-patrimoine-2024",
-      "title": "Journées du patrimoine 2024 — Un succès pour le PB2I",
-      "excerpt": "Les Journées européennes du patrimoine ont été l'occasion pour l'association PB2I d'accueillir de nombreux visiteurs et de présenter ses collections.",
-      "date": "22 septembre 2024",
-      "author": "Yves MOUGEY",
+      "id": "journee-patrimoine-2024",
+      "title": "Journées du patrimoine 2024",
+      "excerpt": "Le Musée Bull et de la Mécanographie ouvre ses portes pour les journées du patrimoine 2024.",
+      "date": "2024-09-21",
+      "author": "PB2I",
       "authorAvatar": "/assets/images/avatar-default.jpg",
       "thumbnail": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&q=70",
       "content": [
-        "Les Journées européennes du patrimoine ont été l'occasion pour l'association PB2I d'accueillir de nombreux visiteurs et de présenter ses collections.",
-        "Plus de 200 personnes ont pu découvrir nos machines mécanographiques, imprimantes et équipements de saisie de données lors de démonstrations animées par nos bénévoles.",
-        "Un succès qui nous encourage à poursuivre notre mission de préservation et de valorisation du patrimoine industriel informatique de Belfort."
+        "Le 21 Septembre 2024, journée du patrimoine 2024, le Musée Bull et de la Mécanographie ouvre ses portes le samedi 21 Septembre de 14h à 18h et le dimanche 22 Septembre de 10h à 12h et de 14h à 18h, 5 rue Jacqueline Auriol 90000 Belfort."
       ],
       "images": [],
-      "tags": ["Événement", "Patrimoine", "Public"]
+      "tags": ["Patrimoine", "Visite"]
     },
     {
-      "id": "nouvelle-acquisition-pr71",
-      "title": "Nouvelle acquisition : l'imprimante à impact sur bande PR71",
-      "excerpt": "L'association PB2I a fait l'acquisition d'une imprimante à impact sur bande PR71 en excellent état de conservation.",
-      "date": "5 octobre 2024",
-      "author": "Gérard GRAFF",
+      "id": "visite-iut-informatique-2024",
+      "title": "Visite des étudiants de l'IUT d'informatique",
+      "excerpt": "Le Musée accueille 75 élèves de l'IUT d'informatique de Belfort.",
+      "date": "2024-05-29",
+      "author": "PB2I",
+      "authorAvatar": "/assets/images/avatar-default.jpg",
+      "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=70",
+      "content": [
+        "Les 29 et 31 Mai 2024, le Musée accueille 75 élèves de l'IUT d'informatique de Belfort.",
+        "Ce sont 3 groupes d'élèves ingénieurs qui assisteront à la présentation de la naissance du traitement informatique des données via un atelier de Mécanographie (toujours en fonctionnement aujourd'hui)."
+      ],
+      "images": [],
+      "tags": ["Étudiants", "Visite"]
+    },
+    {
+      "id": "visite-benevoles-acs-2024",
+      "title": "Visite des bénévoles de l'ACS Paris",
+      "excerpt": "Le Musée accueille les bénévoles de l'ACS PARIS (Association nationale de retraités Bull).",
+      "date": "2024-05-24",
+      "author": "PB2I",
+      "authorAvatar": "/assets/images/avatar-default.jpg",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Punch_card_reader_IBM.jpg/640px-Punch_card_reader_IBM.jpg",
+      "content": [
+        "Le 24 mai 2024, le Musée accueille les bénévoles de l'ACS PARIS (Association nationale de retraités Bull)."
+      ],
+      "images": [],
+      "tags": ["ACS", "Visite"]
+    },
+    {
+      "id": "visite-jura-suisse-2024",
+      "title": "Visite d'un groupe du canton du Jura",
+      "excerpt": "Un groupe du canton du Jura en Suisse visite le Musée.",
+      "date": "2024-05-04",
+      "author": "PB2I",
+      "authorAvatar": "/assets/images/avatar-default.jpg",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Belfort%2C_Territoire_de_Belfort%2C_France_-_panoramio_%28102%29.jpg/640px-Belfort%2C_Territoire_de_Belfort%2C_France_-_panoramio_%28102%29.jpg",
+      "content": [
+        "Le 04 Mai 2024, un groupe du canton du Jura en Suisse visite le Musée. Les 25 participants apprécient la visite."
+      ],
+      "images": [],
+      "tags": ["Visite", "Jura"]
+    },
+    {
+      "id": "ag-acs-pb2i-2024",
+      "title": "AG de ACS et PB2I",
+      "excerpt": "Assemblée Générale de ACS et PB2I le 13 mars 2024.",
+      "date": "2024-03-13",
+      "author": "PB2I",
       "authorAvatar": "/assets/images/avatar-default.jpg",
       "thumbnail": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=70",
       "content": [
-        "L'association PB2I a fait l'acquisition d'une imprimante à impact sur bande PR71 en excellent état de conservation.",
-        "Cette machine, fabriquée par Bull à Belfort dans les années 1970, vient compléter notre collection d'imprimantes à impact.",
-        "Nos techniciens sont à l'œuvre pour remettre cette pièce en état de fonctionnement afin de pouvoir la présenter lors de nos prochaines démonstrations."
+        "Le 13 Mars 2024 s'est tenue l'Assemblée Générale de l'ACS et de PB2I."
       ],
       "images": [],
-      "tags": ["Acquisition", "Imprimantes", "PR71"]
+      "tags": ["AG", "Association"]
     }
   ]
 }

@@ -24,11 +24,12 @@ export function createFooter() {
 
       <!-- Liens -->
       <div class="flex flex-col gap-4 col-span-1">
-        <h3 class="font-heading text-sm font-semibold text-white uppercase tracking-wider">Liens</h3>
+        <h3 class="font-heading text-sm font-semibold text-white uppercase tracking-wider">Navigation</h3>
         <nav class="flex flex-col gap-2">
           <a href="${BASE_URL}notre-histoire.html" class="text-xs text-white/75 hover:text-white transition-colors">Notre histoire</a>
           <a href="${BASE_URL}nos-missions.html"   class="text-xs text-white/75 hover:text-white transition-colors">Nos missions</a>
           <a href="${BASE_URL}association.html"    class="text-xs text-white/75 hover:text-white transition-colors">L'association</a>
+          <a href="${BASE_URL}collections/musee.html" class="text-xs text-white/75 hover:text-white transition-colors">Nos collections</a>
           <a href="${BASE_URL}actualites.html"     class="text-xs text-white/75 hover:text-white transition-colors">Actualités</a>
           <a href="${BASE_URL}contact.html"        class="text-xs text-white/75 hover:text-white transition-colors">Contact</a>
         </nav>

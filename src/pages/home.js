@@ -4,12 +4,14 @@
 
 import { mountComponents, initFadeIn } from '../components.js'
 import { getActiveLang } from '../utils/lang.js'
-import '../../public/data/fr/articles.json' // ensure bundled
+import { initI18n, translateDOM } from '../utils/i18n.js'
 
 window.PB2I_PAGE = 'home'
 
 // Mount navbar + footer
-mountComponents('histoire')
+await initI18n()
+  mountComponents('histoire')
+  translateDOM()
 
 // ── Carousel ────────────────────────────────────────────────
 const track  = document.getElementById('carousel-track')
@@ -97,6 +99,21 @@ async function loadNews() {
     const data = await res.json()
     const articles = data.articles?.slice(0, 3) || []
 
+    const formatArticleDate = (isoStr) => {
+      try {
+        const parts = isoStr.split('-')
+        let d = new Date(isoStr)
+        if (parts.length === 3) {
+          d = new Date(parts[0], parseInt(parts[1]) - 1, parts[2])
+        }
+        if (isNaN(d.valueOf())) return isoStr
+        return new Intl.DateTimeFormat(lang || 'fr', { day: 'numeric', month: 'long', year: 'numeric' }).format(d)
+      } catch (e) { 
+        console.error('Date format error:', e)
+        return isoStr 
+      }
+    }
+
     newsList.innerHTML = articles.map(a => `
       <a href="${baseUrl}article.html?id=${a.id}"
         class="bg-white border-2 border-[#252525] flex gap-4 items-start overflow-hidden relative w-full min-h-[80px] shrink-0 no-underline hover:scale-[1.01] transition-transform duration-150">
@@ -106,7 +123,7 @@ async function loadNews() {
         <div class="flex-1 min-w-0 pr-3 py-2 flex flex-col justify-between gap-1">
           <p class="font-heading font-semibold text-sm text-[#252525] leading-snug line-clamp-2">${a.title}</p>
           <p class="text-[11px] text-[#252525]/80 line-clamp-1 leading-normal">${a.excerpt || ''}</p>
-          <p class="text-[10px] font-semibold text-[#252525] text-right">${a.date}</p>
+          <p class="text-[10px] font-semibold text-[#252525] text-right">${formatArticleDate(a.date)}</p>
         </div>
       </a>
     `).join('')

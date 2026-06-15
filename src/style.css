@@ -11,6 +11,7 @@
   --color-primary-dark:  #5a1c1c;
   --color-primary-light: #8a3030;
   --color-primary-50:    #fdf2f2;
+  --color-secondary:     #FBF1E4; /* Beige */
   --color-warm-bg:       #F5F0EB;
   --color-warm-card:     #FAF7F4;
   --color-warm-200:      #EDE4DA;
@@ -142,7 +143,9 @@
 
   /* --- Cards: Article --- */
   .card-article {
-    @apply bg-white rounded-xl overflow-hidden flex flex-col cursor-pointer transition-all duration-300;
+    @apply rounded-xl overflow-hidden flex flex-col cursor-pointer transition-all duration-300;
+    background: var(--color-secondary);
+    color: var(--color-text-body);
     box-shadow: var(--shadow-card);
   }
   .card-article:hover {
@@ -255,9 +258,12 @@
     background: #fbf1e4;
     color: #252525;
   }
-  .card-carousel-item.bg-red {
+  .card-carousel-item.bg-beige:hover {
     background: #702424;
-    color: white;
+    color: #ffffff;
+  }
+  .card-carousel-item.bg-beige:hover .card-polaroid-caption {
+    color: #ffffff;
   }
 
   .line-separator {

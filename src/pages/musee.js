@@ -4,9 +4,12 @@
  */
 import { mountComponents, initFadeIn } from '/src/components.js'
 import { getActiveLang } from '/src/utils/lang.js'
+import { initI18n, translateDOM } from '../utils/i18n.js'
 
 window.PB2I_PAGE = 'home'
-mountComponents('collections')
+await initI18n()
+  mountComponents('musee')
+  translateDOM()
 
 const baseUrl = import.meta.env.BASE_URL || '/'
 
@@ -23,7 +26,44 @@ const closeBtn   = document.getElementById('modal-close')
 function openMachineModal(machine) {
   modalTitle.textContent = machine.name
   modalName.textContent  = machine.name
-  modalDesc.textContent  = machine.description
+
+  // Format description: support paragraphs and basic bullet lists (starting with - or •)
+  const rawDesc = machine.description || ''
+  const formattedDesc = rawDesc.split('\n').reduce((acc, line) => {
+    line = line.trim()
+    if (!line) return acc
+
+    const imgMatch = line.match(/^!\[(.*?)\]\((.*?)\)$/);
+    if (imgMatch) {
+      if (acc.inList) {
+        acc.html += '</ul>'
+        acc.inList = false
+      }
+      const alt = imgMatch[1];
+      const src = imgMatch[2].startsWith('/') ? baseUrl + imgMatch[2].slice(1) : imgMatch[2];
+      acc.html += `<img src="${src}" alt="${alt}" class="w-auto max-w-full mx-auto rounded-xl my-5 shadow-sm object-contain max-h-72 bg-white p-2 border" style="border-color:rgba(0,0,0,0.08)">`
+      return acc
+    }
+
+    if (line.startsWith('- ') || line.startsWith('• ')) {
+      if (!acc.inList) {
+        acc.html += '<ul class="list-disc list-inside space-y-1 mb-3 ml-2">'
+        acc.inList = true
+      }
+      acc.html += `<li>${line.substring(2)}</li>`
+    } else {
+      if (acc.inList) {
+        acc.html += '</ul>'
+        acc.inList = false
+      }
+      acc.html += `<p class="mb-3">${line}</p>`
+    }
+    return acc
+  }, { html: '', inList: false })
+  if (formattedDesc.inList) formattedDesc.html += '</ul>'
+  
+  modalDesc.innerHTML = formattedDesc.html
+
   modalImg.src           = machine.image.startsWith('/') ? baseUrl + machine.image.slice(1) : baseUrl + machine.image
   modalImg.alt           = machine.name
 

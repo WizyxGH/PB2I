@@ -3,8 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Magnétographie — Collections PB2I. Moteurs magnétographiques et équipements de saisie de données." />
   <title>Magnétographie — Collections PB2I</title>
+
+  <meta name="description" content="Magnétographie — Collections PB2I. Moteurs magnétographiques et équipements de saisie de données." />
+  <meta property="og:title" content="Magnétographie — Collections PB2I" />
+  <meta property="og:description" content="Magnétographie — Collections PB2I. Moteurs magnétographiques et équipements de saisie de données." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pb2i.fr/" />
+  <meta property="og:image" content="https://pb2i.fr/assets/images/logo-pb2i.png" />
+  <meta property="og:site_name" content="PB2I" />
+
+
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <script type="module" src="/src/pages/magnetographie.js"></script>
@@ -13,117 +22,44 @@
 <main id="main-content" class="page-offset">
 
   <!-- Header -->
-  <div class="px-4 lg:px-36 py-12 text-center border-b" style="border-color:rgba(112,36,36,0.1)">
-    <p class="text-xs font-semibold uppercase tracking-widest mb-3" style="color:var(--color-primary)">Nos collections</p>
-    <h1 class="page-title">Magnétographie</h1>
+  <div class="px-4 lg:px-36 py-12 text-center border-b border-transparent">
+    <p class="text-xs font-semibold uppercase tracking-widest mb-3 text-black">Nos collections</p>
+    <h1 class="page-title text-primary uppercase">Magnétographie</h1>
   </div>
 
   <!-- Intro -->
-  <div class="px-4 lg:px-36 py-10 max-w-5xl">
-    <p class="text-sm leading-relaxed mb-10" style="color:var(--color-text-muted)">
-      La magnétographie est une technologie d'impression non-impact révolutionnaire développée et produite
-      à Belfort par Bull. Contrairement aux imprimantes à impact, elle n'utilise pas de marteaux ni de
-      caractères mécaniques, mais un processus magnétique analogue à celui d'une photocopieuse laser moderne.
+  <div class="px-4 lg:px-36 py-10 max-w-[1200px] mx-auto">
+    <p class="text-sm leading-relaxed mb-16 text-gray-500">
+      Les articles de ce menu présentent, à l'aide d'animations simples, les principales technologies mises en œuvre dans un moteur magnétographique typique.
     </p>
 
-    <!-- Section: Principe -->
-    <section class="mb-10">
-      <h2 class="section-title mb-4">Le principe magnétographique</h2>
-      <p class="text-sm leading-relaxed mb-4" style="color:var(--color-text-muted)">
-        Le procédé magnétographique fonctionne en trois étapes principales :
+    <!-- Section: Fonctionnement -->
+    <section class="mb-16">
+      <h2 class="section-title mb-6">Fonctionnement de la magnétographie</h2>
+      <p class="text-sm leading-relaxed mb-10 text-gray-500">
+        La magnétographie... comment ça marche ?
       </p>
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-        <div class="rounded-xl p-5 text-center" style="background:var(--color-warm-bg)">
-          <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 font-heading font-bold text-white text-lg"
-            style="background:var(--color-primary)">1</div>
-          <p class="font-semibold text-sm mb-2" style="color:var(--color-text-body)">Magnétisation</p>
-          <p class="text-xs leading-relaxed" style="color:var(--color-text-muted)">Le tambour magnétisable reçoit l'image de la page sous forme de zones magnétisées.</p>
-        </div>
-        <div class="rounded-xl p-5 text-center" style="background:var(--color-warm-bg)">
-          <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 font-heading font-bold text-white text-lg"
-            style="background:var(--color-primary)">2</div>
-          <p class="font-semibold text-sm mb-2" style="color:var(--color-text-body)">Développement</p>
-          <p class="text-xs leading-relaxed" style="color:var(--color-text-muted)">Une poudre magnétique (toner) est attirée par les zones magnétisées et forme l'image visible.</p>
-        </div>
-        <div class="rounded-xl p-5 text-center" style="background:var(--color-warm-bg)">
-          <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 font-heading font-bold text-white text-lg"
-            style="background:var(--color-primary)">3</div>
-          <p class="font-semibold text-sm mb-2" style="color:var(--color-text-body)">Fixation</p>
-          <p class="text-xs leading-relaxed" style="color:var(--color-text-muted)">La chaleur fixe définitivement le toner sur le papier pour une impression durable et précise.</p>
-        </div>
+      
+      <div class="flex justify-center mb-16">
+        <img src="/assets/collections/magnetographie/anim_tambour.gif" alt="Tambour magnétographique" class="w-full max-w-sm object-contain" onerror="this.onerror=null; this.src='/assets/collections/magnetographie/Tambour.png'">
       </div>
     </section>
 
-    <!-- Engines with modals -->
-    <section class="mb-10 border-t pt-10" style="border-color:rgba(112,36,36,0.1)">
-      <h2 class="section-title mb-6">Moteurs magnétographiques</h2>
-      <p class="text-sm leading-relaxed mb-6" style="color:var(--color-text-muted)">
-        Cliquez sur un moteur pour en savoir plus sur son fonctionnement.
-      </p>
-
-      <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-
-        <!-- Engine 1 -->
-        <button class="engine-card card-machine text-left" data-engine="mg100"
-          aria-label="Moteur magnétographique MG100">
-          <div class="w-28 h-24 rounded-lg flex items-center justify-center mx-auto"
-            style="background:var(--color-warm-200)">
-            <svg class="w-12 h-12" fill="none" stroke="#702424" stroke-width="1.5" viewBox="0 0 64 64">
-              <circle cx="32" cy="32" r="20" stroke-dasharray="5,3"/>
-              <circle cx="32" cy="32" r="10"/>
-              <line x1="32" y1="12" x2="32" y2="18"/>
-              <line x1="32" y1="46" x2="32" y2="52"/>
-            </svg>
-          </div>
-          <p class="font-heading font-bold text-sm text-center" style="color:var(--color-text-body)">Moteur MG100</p>
-          <p class="text-xs text-center" style="color:rgba(37,37,37,0.5)">6 000 t/mn</p>
-        </button>
-
-        <!-- Engine 2 -->
-        <button class="engine-card card-machine text-left" data-engine="mg150"
-          aria-label="Moteur magnétographique MG150">
-          <div class="w-28 h-24 rounded-lg flex items-center justify-center mx-auto"
-            style="background:var(--color-warm-200)">
-            <svg class="w-12 h-12" fill="none" stroke="#702424" stroke-width="1.5" viewBox="0 0 64 64">
-              <rect x="12" y="20" width="40" height="24" rx="4"/>
-              <circle cx="32" cy="32" r="8"/>
-              <line x1="20" y1="14" x2="20" y2="20"/>
-              <line x1="44" y1="14" x2="44" y2="20"/>
-            </svg>
-          </div>
-          <p class="font-heading font-bold text-sm text-center" style="color:var(--color-text-body)">Moteur MG150</p>
-          <p class="text-xs text-center" style="color:rgba(37,37,37,0.5)">9 000 t/mn</p>
-        </button>
-
-        <!-- Engine 3 -->
-        <button class="engine-card card-machine text-left" data-engine="mg200"
-          aria-label="Moteur magnétographique MG200">
-          <div class="w-28 h-24 rounded-lg flex items-center justify-center mx-auto"
-            style="background:var(--color-warm-200)">
-            <svg class="w-12 h-12" fill="none" stroke="#702424" stroke-width="1.5" viewBox="0 0 64 64">
-              <polygon points="32,8 52,20 52,44 32,56 12,44 12,20"/>
-              <circle cx="32" cy="32" r="8"/>
-            </svg>
-          </div>
-          <p class="font-heading font-bold text-sm text-center" style="color:var(--color-text-body)">Moteur MG200</p>
-          <p class="text-xs text-center" style="color:rgba(37,37,37,0.5)">12 000 t/mn</p>
-        </button>
-
+    <!-- Section: Technologies -->
+    <section class="mb-16">
+      <h2 class="section-title mb-10">Les technologies d'un moteur magnétographique typique</h2>
+      
+      <div id="tech-grid" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        <!-- Injected by magnetographie.js -->
       </div>
     </section>
 
-    <!-- Image full width -->
-    <div class="my-10 rounded-2xl overflow-hidden shadow-md" style="background:var(--color-warm-bg);padding:1.5rem">
-      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=70"
-        alt="Moteur magnétographique Bull"
-        class="w-full rounded-xl object-cover max-h-72 mx-auto shadow-sm">
-      <p class="text-xs text-center mt-3 italic" style="color:rgba(37,37,37,0.5)">Moteur magnétographique de la collection PB2I</p>
-    </div>
+
 
   </div>
 
   <!-- Engine Modal -->
-  <div id="engine-overlay"
+  <div id="machine-overlay"
     class="fixed inset-0 z-[1000] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-250"
     style="background:rgba(0,0,0,0.6);backdrop-filter:blur(4px)">
 
@@ -132,14 +68,16 @@
 
       <!-- Modal Header -->
       <div class="flex items-center justify-between px-6 py-4" style="background:var(--color-primary)">
-        <h2 id="engine-modal-title" class="font-heading font-bold text-lg text-white">Moteur</h2>
-        <button id="engine-modal-close"
+        <h2 id="modal-title" class="font-heading font-bold text-lg text-white">Technologie</h2>
+        <button id="modal-close"
           class="w-8 h-8 rounded-lg flex items-center justify-center text-white hover:bg-white/20 transition-colors text-xl leading-none">✕</button>
       </div>
 
       <!-- Modal Body -->
-      <div class="overflow-y-auto flex-1 p-6">
-        <div id="engine-modal-body" class="text-sm leading-relaxed" style="color:var(--color-text-muted)">
+      <div class="overflow-y-auto flex-1 p-6 text-center">
+        <h3 id="modal-name" class="font-heading font-bold text-xl mb-4 text-primary"></h3>
+        <img id="modal-img" src="" alt="" class="mx-auto max-h-64 object-contain mb-6">
+        <div id="modal-desc" class="text-sm leading-relaxed text-left text-gray-600">
           <!-- Injected by JS -->
         </div>
       </div>

@@ -3,9 +3,12 @@
  */
 import { mountComponents, initFadeIn } from '../components.js'
 import { getActiveLang } from '../utils/lang.js'
+import { initI18n, translateDOM } from '../utils/i18n.js'
 
 window.PB2I_PAGE = 'articles'
-mountComponents('actualites')
+await initI18n()
+  mountComponents('actualites')
+  translateDOM()
 
 async function loadArticles() {
   const grid      = document.getElementById('articles-grid')
@@ -49,7 +52,7 @@ async function loadArticles() {
               </div>
             </div>
             <span class="text-xs font-semibold px-3 py-1.5 rounded-lg text-white" style="background:var(--color-primary)">
-              Lire l'article →
+              Lire l'article
             </span>
           </div>
         </div>

@@ -5,6 +5,7 @@
 
 import '../style.css'
 import { getActiveLang, saveLang } from '../utils/lang.js'
+import { t } from '../utils/i18n.js'
 
 const BASE_URL = import.meta.env.BASE_URL || '/'
 export const logoUrl = `${BASE_URL}assets/logo.png`
@@ -21,18 +22,18 @@ function flagSvg(lang) {
 // ── HTML ─────────────────────────────────────────────────────
 export function createNavbar(activePage = '') {
   const links = [
-    { label: 'Notre histoire', href: `${BASE_URL}notre-histoire.html`, key: 'histoire' },
-    { label: 'Nos missions',   href: `${BASE_URL}nos-missions.html`,   key: 'missions'  },
-    { label: "L'association",  href: `${BASE_URL}association.html`,    key: 'association' },
-    { label: 'Actualités',     href: `${BASE_URL}actualites.html`,     key: 'actualites' },
-    { label: 'Contact',        href: `${BASE_URL}contact.html`,        key: 'contact'    },
+    { label: t('navbar.histoire'), href: `${BASE_URL}notre-histoire.html`, key: 'histoire' },
+    { label: t('navbar.missions'),   href: `${BASE_URL}nos-missions.html`,   key: 'missions'  },
+    { label: t('navbar.association'),  href: `${BASE_URL}association.html`,    key: 'association' },
+    { label: t('navbar.actualites'),     href: `${BASE_URL}actualites.html`,     key: 'actualites' },
+    { label: t('navbar.contact'),        href: `${BASE_URL}contact.html`,        key: 'contact'    },
   ]
 
   const collectionLinks = [
-    { label: 'Mécanographie',  href: `${BASE_URL}collections/mecanographie.html` },
-    { label: 'Imprimantes',    href: `${BASE_URL}collections/imprimantes.html`    },
-    { label: 'Magnétographie', href: `${BASE_URL}collections/magnetographie.html` },
-    { label: 'Musée',          href: `${BASE_URL}collections/musee.html`          },
+    { label: t('navbar.mecanographie'),  href: `${BASE_URL}collections/mecanographie.html` },
+    { label: t('navbar.imprimantes'),    href: `${BASE_URL}collections/imprimantes.html`    },
+    { label: t('navbar.magnetographie'), href: `${BASE_URL}collections/magnetographie.html` },
+    { label: t('navbar.musee'),          href: `${BASE_URL}collections/musee.html`          },
   ]
 
   const navLinks = links.map(l =>
@@ -89,7 +90,7 @@ export function createNavbar(activePage = '') {
           class="flex items-center gap-1 text-sm font-semibold text-white/90 hover:text-white transition-colors cursor-pointer bg-transparent border-none relative navbar-link"
           aria-haspopup="true" aria-expanded="false"
           style="font-family:var(--font-body)">
-          Nos collections
+          ${t('navbar.collections')}
           <svg id="nav-dropdown-chevron" class="w-4 h-4 fill-white transition-transform duration-200 flex-shrink-0" viewBox="0 0 20 20">
             <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
           </svg>
@@ -143,8 +144,8 @@ export function createNavbar(activePage = '') {
     <button id="mob-col-toggle"
       class="flex items-center justify-between w-full py-3 text-base font-semibold text-white border-b border-white/15 bg-transparent border-l-0 border-r-0 border-t-0 cursor-pointer text-left"
       style="font-family:var(--font-body)">
-      Nos collections
-      <svg id="mob-col-chevron" class="w-4.5 h-4.5 fill-white transition-transform duration-200" viewBox="0 0 20 20">
+          ${t('navbar.collections')}
+          <svg id="mob-col-chevron" class="w-4.5 h-4.5 fill-white transition-transform duration-200" viewBox="0 0 20 20">
         <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
       </svg>
     </button>
@@ -216,7 +217,7 @@ export function initNavbarInteractions() {
       closeLangMenu()
       saveLang(btn.dataset.lang)
       setActiveLang(btn.dataset.lang)
-      window.i18n?.setLanguage(btn.dataset.lang, window.PB2I_PAGE)
+      window.location.reload()
     })
   })
 
@@ -281,7 +282,7 @@ export function initNavbarInteractions() {
     btn.addEventListener('click', () => {
       saveLang(btn.dataset.lang)
       setActiveLang(btn.dataset.lang)
-      window.i18n?.setLanguage(btn.dataset.lang, window.PB2I_PAGE)
+      window.location.reload()
     })
   })
 
