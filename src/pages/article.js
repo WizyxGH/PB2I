@@ -56,15 +56,15 @@ async function loadArticle() {
 
     // Render body
     body.innerHTML = `
+      <!-- Hero image -->
+      <img src="${article.thumbnail}" alt="${article.title}"
+        class="w-full rounded-2xl my-10 shadow-md object-cover max-h-[320px]"
+        onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=80'">
+
       <!-- Intro paragraphs -->
       ${article.content.slice(0, 2).map(p => `<p class="text-base leading-loose mb-6" style="color:var(--color-text-muted)">${p}</p>`).join('')}
 
-      <!-- Hero image -->
-      <img src="${article.thumbnail}" alt="${article.title}"
-        class="w-full rounded-2xl my-10 shadow-md object-cover max-h-[480px]"
-        onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=80'">
-
-      <!-- Rest of content -->
+      <!-- Rest of content --
       ${article.content.slice(2).map(p => `<p class="text-base leading-loose mb-6" style="color:var(--color-text-muted)">${p}</p>`).join('')}
 
       <!-- Author -->

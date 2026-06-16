@@ -27,7 +27,8 @@ export function createFooter() {
         <h3 class="font-heading text-sm font-semibold text-white uppercase tracking-wider">Navigation</h3>
         <nav class="grid grid-cols-2 gap-x-4 gap-y-2">
           <div class="flex flex-col gap-2">
-            <a href="${BASE_URL}notre-histoire.html" class="text-xs text-white/75 hover:text-white transition-colors">Notre histoire</a>
+            <a href="${BASE_URL}index.html"          class="text-xs text-white/75 hover:text-white transition-colors">Accueil</a>
+          <a href="${BASE_URL}notre-histoire.html"   class="text-xs text-white/75 hover:text-white transition-colors">Notre histoire</a>
             <a href="${BASE_URL}nos-missions.html"   class="text-xs text-white/75 hover:text-white transition-colors">Nos missions</a>
             <a href="${BASE_URL}association.html"    class="text-xs text-white/75 hover:text-white transition-colors">L'association</a>
             <a href="${BASE_URL}actualites.html"     class="text-xs text-white/75 hover:text-white transition-colors">Actualités</a>
@@ -74,7 +75,7 @@ export function createFooter() {
 
     <!-- Copyright -->
     <div style="background:var(--color-primary-dark)" class="text-center py-3">
-      <p class="text-xs text-white/50">© 2026 PB2I — Patrimoine Belfortain de l'Industrie Informatique</p>
+      <p class="text-xs text-white/50">© 2026 PB2I</p>
     </div>
   </footer>
   `

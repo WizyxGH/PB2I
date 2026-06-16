@@ -31,7 +31,7 @@ const chronoData = [
     title: "Titre de l'évènement",
     subtitle: "Sous-titre ou description courte pour 1974.",
     desc: "<p>Description détaillée de l'évènement de 1974.</p>",
-    quote: ""
+    quote: "La DI-180 est, à cette époque, la seule imprimante magnétique disponible sur le marché. Elle utilise des composants magnétiques directement issus des technologies de mémoires de masse (rubans, disques magnétiques). Impression sérielle limitée à 180 lignes par minute."
   },
   {
     id: "1975",
@@ -39,7 +39,7 @@ const chronoData = [
     title: "Titre de l'évènement",
     subtitle: "Sous-titre ou description courte pour 1975.",
     desc: "<p>Description détaillée de l'évènement de 1975.</p>",
-    quote: ""
+    quote: "Réalisation de maquettes à bande magnétique large. Essais de têtes d’écriture intégrées empruntées aux disques. Premières investigations en matière de „toner“ (encre en poudre)."
   },
   {
     id: "1976",
@@ -47,7 +47,7 @@ const chronoData = [
     title: "Titre de l'évènement",
     subtitle: "Sous-titre ou description courte pour 1976.",
     desc: "<p>Description détaillée de l'évènement de 1976.</p>",
-    quote: ""
+    quote: "L’effectif mobilisé passe de 5 à 20 ingénieurs et techniciens."
   },
   {
     id: "1977",
@@ -63,7 +63,7 @@ const chronoData = [
     title: "Titre de l'évènement",
     subtitle: "Sous-titre ou description courte pour 1978.",
     desc: "<p>Description détaillée de l'évènement de 1978.</p>",
-    quote: ""
+    quote: "Le nom commercial anticipé pour le futur produit est resté assez fluctuant à cette époque : MP60, puis MP6000, enfin MP6090…\nDe fait, les partenaires commerciaux ont très vite adopté le nom de code du projet utilisé par les ingénieurs R&D : „Mathilde“. Ce nom sera aussi, par la suite, celui repris par la presse et restera le plus connu du grand public…"
   },
   {
     id: "1979",
@@ -71,7 +71,7 @@ const chronoData = [
     title: "Titre de l'évènement",
     subtitle: "Sous-titre ou description courte pour 1979.",
     desc: "<p>Description détaillée de l'évènement de 1979.</p>",
-    quote: ""
+    quote: "Les procédés de fabrication (qui ont été regroupés dans la division R&D Techno) sont progressivement définis et mis au point.\nContacts avec plusieurs fabricants de toner en Europe et aux USA pour sous-traiter la future fabrication en volume du toner. Résultats peu concluants : décision d’investir dans un atelier de production d’encre à Belfort."
   },
   {
     id: "1980",
@@ -95,7 +95,7 @@ const chronoData = [
     title: "Titre de l'évènement",
     subtitle: "Sous-titre ou description courte pour 1982.",
     desc: "<p>Description détaillée de l'évènement de 1982.</p>",
-    quote: ""
+    quote: "NCC’82 puis SICOB 1982 (Paris)"
   },
   {
     id: "1983",
@@ -103,7 +103,7 @@ const chronoData = [
     title: "Titre de l'évènement",
     subtitle: "Sous-titre ou description courte pour 1983.",
     desc: "<p>Description détaillée de l'évènement de 1983.</p>",
-    quote: ""
+    quote: "NCC’83 (Anaheim, Ca, USA), mai 1983.\nSICOB (Paris), septembre 1983.\nNB : par convention, les 3 derniers chiffres désignent la vitesse d’impression en ppm (090 signifie 90 ppm)"
   },
   {
     id: "1984",
@@ -111,7 +111,7 @@ const chronoData = [
     title: "Titre de l'évènement",
     subtitle: "Sous-titre ou description courte pour 1984.",
     desc: "<p>Description détaillée de l'évènement de 1984.</p>",
-    quote: ""
+    quote: "Du fait de l’abandon de GE, et de la disparition de la DI-180, BULL est seul à proposer une imprimante magnétique. Le terme magnétographie est de plus en plus utilisé par analogie à celui de l’électrophotographie."
   },
   {
     id: "1985",
@@ -119,7 +119,7 @@ const chronoData = [
     title: "Titre de l'évènement",
     subtitle: "Sous-titre ou description courte pour 1985.",
     desc: "<p>Description détaillée de l'évènement de 1985.</p>",
-    quote: ""
+    quote: "Cette imprimante ne sera jamais réellement commercialisée."
   },
   {
     id: "1986",
@@ -135,7 +135,7 @@ const chronoData = [
     title: "Titre de l'évènement",
     subtitle: "Sous-titre ou description courte pour 1987.",
     desc: "<p>Description détaillée de l'évènement de 1987.</p>",
-    quote: ""
+    quote: "Face à la pression de la concurrence électrophotographique laser, qui règne dans le domaine de l’impression de pages séparées, ce produit n’a pas connu le volume de production des produits MP6xxx."
   },
   {
     id: "1990",
@@ -143,7 +143,7 @@ const chronoData = [
     title: "Titre de l'évènement",
     subtitle: "Sous-titre ou description courte pour 1990.",
     desc: "<p>Description détaillée de l'évènement de 1990.</p>",
-    quote: ""
+    quote: "Développé en coopération avec un fabricant de presses d’imprimerie, un prototype est présenté à DRUPA 90 à Düsseldorf.\nLe nom de code du projet était THV (Très Haute Vitesse)"
   },
   {
     id: "1991",
@@ -151,7 +151,7 @@ const chronoData = [
     title: "Titre de l'évènement",
     subtitle: "Sous-titre ou description courte pour 1991 et après.",
     desc: "<p>Description détaillée de l'évènement de 1991.</p>",
-    quote: ""
+    quote: "Période NIPSON à détailler plus tard"
   }
 ];
 
