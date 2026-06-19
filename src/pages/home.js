@@ -3,7 +3,7 @@
  */
 
 import { mountComponents, initFadeIn } from '../components.js'
-import { getActiveLang } from '../utils/lang.js'
+import { fetchArticles } from '../utils/api.js'
 import { initI18n, translateDOM } from '../utils/i18n.js'
 
 window.PB2I_PAGE = 'home'
@@ -93,11 +93,10 @@ async function loadNews() {
   if (!newsList) return
 
   try {
-    const lang = getActiveLang()
+    const lang = document.documentElement.lang || 'fr'
     const baseUrl = import.meta.env.BASE_URL || '/'
-    const res  = await fetch(`${baseUrl}data/${lang}/articles.json`)
-    const data = await res.json()
-    const articles = data.articles?.slice(0, 3) || []
+    const all = await fetchArticles()
+    const articles = all.slice(0, 3)
 
     const formatArticleDate = (isoStr) => {
       try {

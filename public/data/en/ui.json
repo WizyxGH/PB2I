@@ -10,6 +10,15 @@
     "imprimantes": "Printers",
     "magnetographie": "Magnetography",
     "musee": "Museum",
-    "skip_link": "Skip to main content"
+    "skip_link": "Skip to main content",
+    "home": "Home"
+  },
+  "footer": {
+    "title": "Belfort Heritage of the IT Industry",
+    "navigation": "Navigation",
+    "legal_heading": "Legal Notice",
+    "legal": "Legal Notice",
+    "privacy": "Privacy Policy",
+    "follow": "Follow Us"
   }
 }

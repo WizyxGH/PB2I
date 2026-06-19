@@ -17,20 +17,20 @@
 
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <script type="module" src="/src/pages/musee.js"></script>
+  <script type="module" src="/src/pages/collections/musee.js"></script>
 </head>
 <body class="bg-white">
 <main id="main-content" class="page-offset">
 
   <!-- Header -->
-  <div class="px-4 lg:px-36 py-12 text-center border-b" style="border-color:rgba(112,36,36,0.1)">
+  <div class="border-primary/10 px-4 lg:px-36 py-12 text-center border-b" >
     <p class="text-xs font-semibold uppercase tracking-widest mb-3 text-black">Nos collections</p>
     <h1 class="page-title">Musée</h1>
   </div>
 
   <!-- Intro -->
   <div class="px-4 lg:px-36 pt-10 pb-6">
-    <p class="text-sm leading-relaxed" style="color:var(--color-text-muted)">
+    <p class="text-muted text-sm leading-relaxed" >
       Présentation statique ou dynamique des machines qui font la fierté de notre musée
     </p>
   </div>
@@ -53,7 +53,7 @@
       style="box-shadow:var(--shadow-modal)">
 
       <!-- Modal Header -->
-      <div class="flex items-center justify-between px-6 py-4" style="background:var(--color-primary)">
+      <div class="bg-primary flex items-center justify-between px-6 py-4" >
         <h2 id="modal-title" class="font-heading font-bold text-lg text-white">Machine</h2>
         <button id="modal-close"
           class="w-8 h-8 rounded-lg flex items-center justify-center text-white hover:bg-white/20 transition-colors text-xl leading-none"
@@ -63,10 +63,10 @@
       <!-- Modal Body -->
       <div class="overflow-y-auto flex-1 p-6">
         <img id="modal-img" src="" alt=""
-          class="w-full max-h-80 object-contain rounded-xl mb-6"
-          style="background:var(--color-warm-bg)">
-        <h3 id="modal-name" class="font-heading font-bold text-xl mb-4" style="color:var(--color-text-body)"></h3>
-        <p id="modal-desc" class="text-sm leading-relaxed" style="color:var(--color-text-muted)"></p>
+          class="bg-warm-bg w-full max-h-80 object-contain rounded-xl mb-6"
+          >
+        <h3 id="modal-name" class="text-body font-heading font-bold text-xl mb-4" ></h3>
+        <p id="modal-desc" class="text-muted text-sm leading-relaxed" ></p>
       </div>
     </div>
   </div>

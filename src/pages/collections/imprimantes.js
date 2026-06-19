@@ -1,6 +1,7 @@
 import { mountComponents, initFadeIn } from '/src/components.js';
 import { getActiveLang } from '/src/utils/lang.js';
-import { initI18n, translateDOM } from '../utils/i18n.js';
+import { fetchCollection } from '../../utils/api.js';
+import { initI18n, translateDOM } from '../../utils/i18n.js';
 
 window.PB2I_PAGE = 'home';
 await initI18n();
@@ -160,7 +161,7 @@ if (chronoGrid) {
   function renderGrid(activeId) {
     chronoGrid.innerHTML = chronoData.map(item => {
       const isActive = item.id === activeId;
-      const bgClass = isActive ? 'bg-[#702424]' : 'bg-[#f8eedc] hover:bg-[#f2e2ca]';
+      const bgClass = isActive ? 'bg-[#702424]' : 'bg-secondary hover:bg-warm-200';
       const textClass = isActive ? 'text-white' : 'text-[#702424]';
       const titleClass = isActive ? 'text-white' : 'text-gray-800';
 

@@ -1,9 +1,10 @@
 /**
  * PB2I — Magnétographie page JS
  */
-import { mountComponents, initFadeIn } from '/src/components.js'
+import { mountComponents, initFadeIn } from '../../components.js'
+import { fetchCollection } from '../../utils/api.js'
 import { getActiveLang } from '/src/utils/lang.js'
-import { initI18n, translateDOM } from '../utils/i18n.js'
+import { initI18n, translateDOM } from '../../utils/i18n.js'
 
 window.PB2I_PAGE = 'home'
 await initI18n()
@@ -65,6 +66,11 @@ function openTechModal(tech) {
   modalImg.src           = tech.image.startsWith('/') ? baseUrl + tech.image.slice(1) : baseUrl + tech.image
   modalImg.alt           = tech.name
 
+  const scrollContainer = overlay.querySelector('.overflow-y-auto')
+  setTimeout(() => {
+    if (scrollContainer) scrollContainer.scrollTop = 0
+  }, 10)
+
   overlay.classList.remove('opacity-0', 'pointer-events-none')
   overlay.classList.add('opacity-100', 'pointer-events-auto')
   document.body.style.overflow = 'hidden'
@@ -84,14 +90,12 @@ document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal
 async function loadTechnologies() {
   if (!grid) return
   try {
-    const lang = getActiveLang()
-    const res  = await fetch(`${baseUrl}data/${lang}/collections/magnetographie.json`)
-    const data = await res.json()
+    const data = await fetchCollection('magnetographie')
     const techs = data.technologies || []
 
     grid.innerHTML = techs.map((t, i) => `
       <button
-        class="card-machine bg-[#f8eedc] text-center p-6 flex flex-col items-center justify-between cursor-pointer border-transparent hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2"
+        class="card-machine h-full focus:outline-none focus:ring-2 focus:ring-offset-2"
         style="--tw-ring-color:var(--color-primary)"
         data-id="${t.id}" data-fade
         style="animation-delay:${i * 40}ms"
@@ -99,7 +103,7 @@ async function loadTechnologies() {
         <img src="${baseUrl}${t.image.startsWith('/') ? t.image.slice(1) : t.image}" alt="${t.name}"
           class="w-full h-24 object-contain mx-auto mb-4"
           onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?w=200&q=50'">
-        <p class="font-heading font-bold text-sm leading-snug transition-colors duration-200" style="color:var(--color-text-body)">
+        <p class="text-body font-heading font-bold text-sm leading-snug transition-colors duration-200" >
           ${t.name}
         </p>
       </button>

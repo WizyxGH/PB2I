@@ -3,7 +3,8 @@
  */
 import { mountComponents, initFadeIn } from '/src/components.js'
 import { getActiveLang } from '/src/utils/lang.js'
-import { initI18n, translateDOM } from '../utils/i18n.js'
+import { initI18n, translateDOM } from '../../utils/i18n.js'
+import { fetchCollection } from '../../utils/api.js'
 
 window.PB2I_PAGE = 'home'
 await initI18n()
@@ -91,11 +92,7 @@ async function loadTechs() {
   if (!grid) return
 
   try {
-    const lang = getActiveLang()
-    const res = await fetch(`${baseUrl}data/${lang}/collections/mecanographie.json`)
-    if (!res.ok) throw new Error('Fetch failed')
-    
-    const techs = await res.json()
+    const techs = await fetchCollection('mecanographie')
     
     grid.innerHTML = techs.map(tech => {
       const imgUrl = tech.image.startsWith('/') ? baseUrl + tech.image.slice(1) : tech.image
@@ -104,12 +101,12 @@ async function loadTechs() {
         style="border-color:rgba(0,0,0,0.08)"
         data-id="${tech.id}"
         aria-label="Détails : ${tech.name}">
-        <div class="w-full h-40 overflow-hidden relative" style="background:var(--color-warm-bg)">
+        <div class="bg-warm-bg w-full h-40 overflow-hidden relative" >
           <img src="${imgUrl}" alt="${tech.name}" class="w-full h-full object-contain p-4 transition-transform duration-300 group-hover:scale-105" loading="lazy">
         </div>
         <div class="p-4 flex flex-col flex-1">
-          <h3 class="font-bold text-sm mb-1" style="color:var(--color-text-body)">${tech.name}</h3>
-          <span class="text-xs font-semibold mt-auto" style="color:var(--color-primary)">En savoir plus ↗</span>
+          <h3 class="text-body font-bold text-sm mb-1" >${tech.name}</h3>
+          <span class="text-primary text-xs font-semibold mt-auto" >En savoir plus ↗</span>
         </div>
       </button>
       `

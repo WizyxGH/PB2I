@@ -2,9 +2,10 @@
  * PB2I — Musée page JS
  * Loads machines from JSON, renders grid, handles modal
  */
-import { mountComponents, initFadeIn } from '/src/components.js'
+import { mountComponents, initFadeIn } from '../../components.js'
+import { fetchCollection } from '../../utils/api.js'
 import { getActiveLang } from '/src/utils/lang.js'
-import { initI18n, translateDOM } from '../utils/i18n.js'
+import { initI18n, translateDOM } from '../../utils/i18n.js'
 
 window.PB2I_PAGE = 'home'
 await initI18n()
@@ -67,6 +68,11 @@ function openMachineModal(machine) {
   modalImg.src           = machine.image.startsWith('/') ? baseUrl + machine.image.slice(1) : baseUrl + machine.image
   modalImg.alt           = machine.name
 
+  const scrollContainer = overlay.querySelector('.overflow-y-auto')
+  setTimeout(() => {
+    if (scrollContainer) scrollContainer.scrollTop = 0
+  }, 10)
+
   overlay.classList.remove('opacity-0', 'pointer-events-none')
   overlay.classList.add('opacity-100', 'pointer-events-auto')
   document.body.style.overflow = 'hidden'
@@ -86,14 +92,12 @@ document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal
 async function loadMachines() {
   if (!grid) return
   try {
-    const lang = getActiveLang()
-    const res  = await fetch(`${baseUrl}data/${lang}/collections/musee.json`)
-    const data = await res.json()
+    const data = await fetchCollection('musee')
     const machines = data.machines || []
 
     grid.innerHTML = machines.map((m, i) => `
       <button
-        class="card-machine text-left cursor-pointer border-transparent transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2"
+        class="card-machine h-full focus:outline-none focus:ring-2 focus:ring-offset-2"
         style="--tw-ring-color:var(--color-primary)"
         data-id="${m.id}" data-fade
         style="animation-delay:${i * 40}ms"
@@ -101,7 +105,7 @@ async function loadMachines() {
         <img src="${baseUrl}${m.image.startsWith('/') ? m.image.slice(1) : m.image}" alt="${m.name}"
           class="w-28 h-24 object-contain mx-auto"
           onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?w=200&q=50'">
-        <p class="font-heading font-bold text-sm leading-snug text-center transition-colors duration-200" style="color:var(--color-text-body)">
+        <p class="text-body font-heading font-bold text-sm leading-snug text-center transition-colors duration-200" >
           ${m.name}
         </p>
       </button>

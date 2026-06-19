@@ -48,7 +48,7 @@ export function createNavbar(activePage = '') {
 
   const mobileLinks = links.map(l =>
     `<a href="${l.href}" class="block py-3 text-base font-semibold text-white border-b border-white/15 transition-opacity hover:opacity-75">${l.label}</a>`
-  ).join('')
+  )
 
   const mobileColLinks = collectionLinks.map(l =>
     `<a href="${l.href}" class="block py-2 pl-4 text-base text-white/80 border-b border-white/10 hover:text-white transition-colors">${l.label}</a>`
@@ -96,7 +96,7 @@ export function createNavbar(activePage = '') {
           </svg>
         </button>
         <div id="nav-dropdown-menu"
-          class="absolute top-[calc(100%+14px)] left-0 bg-white rounded-xl shadow-2xl min-w-52 py-2 z-10 opacity-0 pointer-events-none -translate-y-2 transition-all duration-200"
+          class="absolute top-[calc(100%+14px)] left-0 bg-white rounded-xl shadow-2xl min-w-52 z-10 opacity-0 pointer-events-none -translate-y-2 transition-all duration-200 overflow-hidden"
           role="menu">
           ${colLinks}
         </div>
@@ -138,7 +138,7 @@ export function createNavbar(activePage = '') {
     class="fixed z-40 left-0 right-0 bottom-0 overflow-y-auto flex flex-col gap-1 px-6 py-6 -translate-x-full transition-transform duration-400"
     style="top:var(--navbar-mob); background:var(--color-primary)">
 
-    ${mobileLinks}
+    ${mobileLinks.slice(0, 2).join('')}
 
     <!-- Collections submenu -->
     <button id="mob-col-toggle"
@@ -152,6 +152,8 @@ export function createNavbar(activePage = '') {
     <div id="mob-col-sub" class="hidden flex-col pl-4">
       ${mobileColLinks}
     </div>
+
+    ${mobileLinks.slice(2).join('')}
 
     <!-- Mobile lang -->
     <div class="flex gap-6 mt-auto pt-6 border-t border-white/15">

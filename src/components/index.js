@@ -20,6 +20,8 @@ import { createVideoOverlay, initVideoOverlayClose } from './video.js'
 export { openModal, closeModal, closeAllModals } from './modal.js'
 export { openVideo }                             from './video.js'
 export { initFadeIn }                            from './animations.js'
+export { createArticleCard, formatArticleDate }  from './articleCard.js'
+export { initCarousel }                          from './carousel.js'
 
 /**
  * Injects navbar, footer and video overlay into the page, then wires up all interactions.

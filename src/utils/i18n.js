@@ -1,19 +1,14 @@
-import { getActiveLang } from './lang.js';
+import { getActiveLang } from './lang.js'
+import { fetchJSON } from './api.js';
 
 let translations = {};
 
 export async function initI18n() {
   const lang = getActiveLang();
-  const baseUrl = import.meta.env.BASE_URL || '/';
   try {
-    const res = await fetch(`${baseUrl}data/${lang}/ui.json`);
-    if (res.ok) {
-      translations = await res.json();
-    } else {
-      console.warn(`Translation file not found: data/${lang}/ui.json`);
-    }
+    translations = await fetchJSON('ui.json');
   } catch (err) {
-    console.error('Failed to load translations for', lang, err);
+    console.error('Failed to load translations:', err);
   }
 }
 

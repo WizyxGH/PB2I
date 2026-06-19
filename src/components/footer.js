@@ -13,48 +13,48 @@ export function createFooter() {
   return `
   <footer class="relative mt-24" role="contentinfo">
     <div class="footer-wave">${wave}</div>
-    <div style="background:var(--color-primary)" class="px-6 md:px-12 lg:px-36 py-8 grid grid-cols-2 lg:flex lg:flex-row gap-8 lg:gap-12 justify-between">
+    <div class="bg-primary px-6 md:px-12 lg:px-36 py-8 grid grid-cols-2 lg:flex lg:flex-row gap-8 lg:gap-12 justify-between">
       <!-- Branding -->
       <div class="flex flex-col gap-4 col-span-2 lg:col-span-1">
         <img src="${logoUrl}" alt="Logo PB2I" class="h-12 w-auto object-contain self-start" onerror="this.style.display='none'">
-        <p class="font-heading font-extrabold text-white text-sm leading-snug max-w-[200px] lg:max-w-[160px]">
+        <p class="font-heading font-extrabold text-white text-sm leading-snug max-w-[200px] lg:max-w-[160px]" data-i18n="footer.title">
           Patrimoine Belfortain de l'Industrie Informatique
         </p>
       </div>
 
       <!-- Liens -->
       <div class="flex flex-col gap-4 col-span-2 lg:col-span-1">
-        <h3 class="font-heading text-sm font-semibold text-white uppercase tracking-wider">Navigation</h3>
+        <h3 class="font-heading text-sm font-semibold text-white uppercase tracking-wider" data-i18n="footer.navigation">Navigation</h3>
         <nav class="grid grid-cols-2 gap-x-4 gap-y-2">
           <div class="flex flex-col gap-2">
-            <a href="${BASE_URL}index.html"          class="text-xs text-white/75 hover:text-white transition-colors">Accueil</a>
-          <a href="${BASE_URL}notre-histoire.html"   class="text-xs text-white/75 hover:text-white transition-colors">Notre histoire</a>
-            <a href="${BASE_URL}nos-missions.html"   class="text-xs text-white/75 hover:text-white transition-colors">Nos missions</a>
-            <a href="${BASE_URL}association.html"    class="text-xs text-white/75 hover:text-white transition-colors">L'association</a>
-            <a href="${BASE_URL}actualites.html"     class="text-xs text-white/75 hover:text-white transition-colors">Actualités</a>
-            <a href="${BASE_URL}contact.html"        class="text-xs text-white/75 hover:text-white transition-colors">Contact</a>
+            <a href="${BASE_URL}index.html"          class="text-xs text-white/75 hover:text-white transition-colors" data-i18n="navbar.home">Accueil</a>
+            <a href="${BASE_URL}notre-histoire.html"   class="text-xs text-white/75 hover:text-white transition-colors" data-i18n="navbar.histoire">Notre histoire</a>
+            <a href="${BASE_URL}nos-missions.html"   class="text-xs text-white/75 hover:text-white transition-colors" data-i18n="navbar.missions">Nos missions</a>
+            <a href="${BASE_URL}association.html"    class="text-xs text-white/75 hover:text-white transition-colors" data-i18n="navbar.association">L'association</a>
+            <a href="${BASE_URL}actualites.html"     class="text-xs text-white/75 hover:text-white transition-colors" data-i18n="navbar.actualites">Actualités</a>
+            <a href="${BASE_URL}contact.html"        class="text-xs text-white/75 hover:text-white transition-colors" data-i18n="navbar.contact">Contact</a>
           </div>
           <div class="flex flex-col gap-2">
-            <a href="${BASE_URL}collections/mecanographie.html" class="text-xs text-white/75 hover:text-white transition-colors">Mécanographie</a>
-            <a href="${BASE_URL}collections/imprimantes.html" class="text-xs text-white/75 hover:text-white transition-colors">Imprimantes</a>
-            <a href="${BASE_URL}collections/magnetographie.html" class="text-xs text-white/75 hover:text-white transition-colors">Magnétographie</a>
-            <a href="${BASE_URL}collections/musee.html" class="text-xs text-white/75 hover:text-white transition-colors">Musée</a>
+            <a href="${BASE_URL}collections/mecanographie.html" class="text-xs text-white/75 hover:text-white transition-colors" data-i18n="navbar.mecanographie">Mécanographie</a>
+            <a href="${BASE_URL}collections/imprimantes.html" class="text-xs text-white/75 hover:text-white transition-colors" data-i18n="navbar.imprimantes">Imprimantes</a>
+            <a href="${BASE_URL}collections/magnetographie.html" class="text-xs text-white/75 hover:text-white transition-colors" data-i18n="navbar.magnetographie">Magnétographie</a>
+            <a href="${BASE_URL}collections/musee.html" class="text-xs text-white/75 hover:text-white transition-colors" data-i18n="navbar.musee">Musée</a>
           </div>
         </nav>
       </div>
 
       <!-- Mentions légales -->
       <div class="flex flex-col gap-4 col-span-1">
-        <h3 class="font-heading text-sm font-semibold text-white uppercase tracking-wider">Mentions légales</h3>
+        <h3 class="font-heading text-sm font-semibold text-white uppercase tracking-wider" data-i18n="footer.legal_heading">Mentions légales</h3>
         <nav class="flex flex-col gap-2">
-          <a href="${BASE_URL}mentions-legales.html" class="text-xs text-white/75 hover:text-white transition-colors">Mentions légales</a>
-          <a href="${BASE_URL}mentions-legales.html" class="text-xs text-white/75 hover:text-white transition-colors">Confidentialité</a>
+          <a href="${BASE_URL}mentions-legales.html" class="text-xs text-white/75 hover:text-white transition-colors" data-i18n="footer.legal">Mentions légales</a>
+          <a href="${BASE_URL}mentions-legales.html" class="text-xs text-white/75 hover:text-white transition-colors" data-i18n="footer.privacy">Confidentialité</a>
         </nav>
       </div>
 
       <!-- Social -->
       <div class="flex flex-col gap-4 col-span-1">
-        <h3 class="font-heading text-sm font-semibold text-white uppercase tracking-wider">Suivez-nous</h3>
+        <h3 class="font-heading text-sm font-semibold text-white uppercase tracking-wider" data-i18n="footer.follow">Suivez-nous</h3>
         <div class="flex gap-4">
           <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
             class="w-10 h-10 bg-white rounded-lg flex items-center justify-center transition-transform hover:-translate-y-0.5 shadow-sm hover:shadow-md">
@@ -74,7 +74,7 @@ export function createFooter() {
     </div>
 
     <!-- Copyright -->
-    <div style="background:var(--color-primary-dark)" class="text-center py-3">
+    <div class="bg-[var(--color-primary-dark)] text-center py-3">
       <p class="text-xs text-white/50">© 2026 PB2I</p>
     </div>
   </footer>
