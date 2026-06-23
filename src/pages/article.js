@@ -31,6 +31,12 @@ async function loadArticle() {
     document.title = `${article.title} — PB2I`
     document.getElementById('article-page-title').textContent = `${article.title} — PB2I`
 
+    // Update og:image dynamically
+    let ogImage = document.querySelector('meta[property="og:image"]')
+    if (ogImage) {
+      ogImage.setAttribute('content', article.thumbnail.startsWith('http') ? article.thumbnail : baseUrl + article.thumbnail.replace(/^\//, ''))
+    }
+
     // Render header
     header.innerHTML = `
       <h1 class="text-body font-heading font-bold text-3xl lg:text-4xl leading-tight mb-6" >

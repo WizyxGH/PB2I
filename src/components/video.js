@@ -10,7 +10,7 @@ export function createVideoOverlay() {
       <button id="video-close"
         class="absolute -top-10 right-0 text-white/80 hover:text-white text-3xl font-light bg-transparent border-none cursor-pointer transition-colors"
         aria-label="Fermer la vidéo">✕</button>
-      <iframe id="video-iframe" class="w-full h-full rounded-xl shadow-2xl"
+      <iframe id="video-iframe" class="w-full h-full rounded-xl shadow-2xl" title="Lecteur vidéo"
         allow="autoplay; fullscreen" allowfullscreen frameborder="0" src=""></iframe>
     </div>
   </div>

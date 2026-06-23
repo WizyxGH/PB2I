@@ -22,7 +22,7 @@ export function createArticleCard(article, index, baseUrl, lang = 'fr') {
   return `
     <a href="${baseUrl}article.html?id=${article.id}" class="card-article no-underline h-full" data-fade style="animation-delay:${index * 60}ms">
       <div class="card-article-img-wrap">
-        <img src="${article.thumbnail}" alt="${article.title}" class="card-article-img"
+        <img src="${article.thumbnail}" alt="" class="card-article-img"
           onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=70'">
       </div>
       <div class="flex flex-col flex-1 p-5 gap-3">

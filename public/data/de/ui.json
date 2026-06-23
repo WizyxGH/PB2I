@@ -10,6 +10,15 @@
     "imprimantes": "Imprimantes",
     "magnetographie": "Magnétographie",
     "musee": "Musée",
-    "skip_link": "Aller au contenu principal"
+    "skip_link": "Aller au contenu principal",
+    "home": "Accueil"
+  },
+  "footer": {
+    "title": "Patrimoine Belfortain de l'Industrie Informatique",
+    "navigation": "Navigation",
+    "legal_heading": "Mentions légales",
+    "legal": "Mentions légales",
+    "privacy": "Confidentialité",
+    "follow": "Suivez-nous"
   }
 }
